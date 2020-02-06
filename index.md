@@ -51,9 +51,9 @@ Materials provided by the university
 
 # Class Overview
 
-Week 1, January 30: **Numbers**: history of math, counting systems, prime factors
+[Week 1, January 30: **Numbers**](01/): history of math, counting systems, prime factors
 
-Week 2, February 06: **Functions**: transforming numbers, map, scale
+[Week 2, February 06: **Functions**](02/): transforming numbers, map, scale
 
 Week 3, February 13: **Geometry**: polyhedra and compass straight-edge
 
