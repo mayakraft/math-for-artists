@@ -10,26 +10,22 @@
 
 Talk about homework from last time. Share code to calculate prime numbers.
 
-prepare for next class (paper pens pencils)
-
 ## History: The Abassid Period (10 minutes)
 
 At the turn of the millenia Baghdad was a gathering place for all kinds of people. Bayt al-Hikma, "House of Wisdom" where essentially the entire corpus of Greek scientific literature is translated into Arabic.
 
 ### The Compendious Book on Calculation by Completion and Balancing
 
-When Khwarizmi wrote his book on Algebra, he didn't use symbols, it was written out in words. "the thing plus one equals twice the thing", the variable x was called the *thing* or "shay" (شيء)
+When Khwarizmi wrote his book on Algebra in 820AD, he didn't use symbols, the equations were written out in words. "the thing plus one equals twice the thing", the variable x was called the *thing* or "shay" (شيء)
 
 At the time there were two competing ways of writing numbers
 
 - one involved Arabic letters, very similar to Roman numerals (imagine doing arithmetic with Roman numerals)
-- a newer numeral system from India (the one we have)
+- a newer numeral system from India (the same we use today)
 
-Khwarizmi advocated using Hindu numerals in the 9th century. Later in the 1200s, Fibonacci was still advocating them. They still never caught on for hundreds of hears after him!
+Khwarizmi advocated using Hindu numerals in the 9th century. Later in the 1200s, Fibonacci was still advocating them. And they still never caught on for hundreds of years after Fibonacci!
 
 ### Negative numbers
-
-Later in the lesson today, we'll be looking at 6 forms quadratics can take according to Khwarizmi. You might find it odd that he didn't simply move things to the other side of the equation, reducing the total number of equations to simply ax + bx + c = 0. It's because they didn't use negative numbers!
 
 To the Ancient Greeks, negative numbers were meaningless. Everything was a length or a volume, so negative quantities of course couldn't exist.
 
@@ -43,27 +39,24 @@ sources: Wikipedia, Al Jazeera, [Leo Rogers](https://nrich.maths.org/5961)
 
 ## Algebra review (20 minutes)
 
-### Balance, and the =
+### Balance, and the = sign
 
 *whatever you do to one side, you can do to the other*
 
-moving things from one side to another in a simple equation
+Years of algebra taught us that we can move things to the other side of the equation. We have an intuition about switching using addition/subtraction and multiplication/division
 
-```
- 5     1
---- = ---
- 1     x
-```
+- +x or -x: move x to the other side and switch its sign
+- ∙x or ÷x: move x to the other side and flip numerator and denominator
 
-moving something from one side to another is to mutiply it by its inverse. or, flip it from the numerator or the demonimator and write it on the other side.
+Remind yourself what is actually going on here. With addition, you are **subtracting x from both sides**, and in the case of multiplication, you are **multiplying both sides by the inverse of x**.
 
-Introduce addition and subtraction, alongside multiplication and division. Using parenthesis. Exponents and square roots. Combining exponents:
+### Reducing
 
 - x² + x³ cannot be reduced
 - x² ∙ x³ the exponents add. x⁵ (or subtract if they are divided)
 - (x²)³ the exponents multiply. x⁶
 
-Parenthesis and multiplication works such that the outside gets multiplied by everything inside the parenthesis separated by addition/subtraction.
+Parenthesis and multiplication work such that the outside gets multiplied by everything inside the parenthesis separated by addition/subtraction.
 
 a ∙ (x + y + z) = ax + ay + az
 
@@ -75,9 +68,9 @@ and in the case that both sides of the multiplication have parenthesis, each par
 
 In the unique case that the two halves are the same, a pattern emerges you will see often:
 
-(a + b)² = (a + b) ∙ (a + b) = a² + ab + ab + b² = a² + 2ab + b²
+(a + b)² = (a + b) ∙ (a + b) = a² + ab + ab + b² = **a² + 2ab + b²**
 
-for example: (10 - x)² can be rewritten as (10 - x) ∙ (10 - x), further reducing to 100 - 20x + x²
+for example: (10 - x)² can be rewritten as (10 - x) ∙ (10 - x), further reducing to x² - 20x + 100
 
 Khwarizmi describes 6 forms a square can take
 
@@ -88,21 +81,64 @@ Khwarizmi describes 6 forms a square can take
 - squares and number equal roots (ax² + c = bx)
 - roots and number equal squares (bx + c = ax²)
 
+look especially at those last three, why didn't Khwarizmi simply write them as one equation and consider all cases covered? **because there were no negative numbers!** They weren't allowed to move a thing to the other side if it was going to result in a negative quantity.
+
+Quadratics were the extent of algebra at the time, 820AD, it took another few hundred years until the solution to cubics was discovered by Omar Khayyam at around 1100 AD.
+
+## Identity operations
+
+In linear algebra, we'll be learning about the identity matrix. When you multiply something by the identity matrix, you get back that thing. Identity operations exist for all operands.
+
+- a + 0 = a
+- a ∙ 1 = a
+
+for addition and subtraction, the identity quantity is 0 and 1 respectively. These seem like trivial cases, but it gets more fun when you use alternate representations of each. For example:
+
+```
+       2.54 cm
+1  =  ---------
+        1 in
+```
+
 ### Unit conversion
 
-Measure your computer screen in lightyear units or in the size of Carbon atoms.
+It's important that you order the top and bottom values in the correct way. What does this convert to and from?:
 
-take your "begin" value and turn it into a fraction by putting it on top of a 1. multiply it by equations like this:
+```
+ 2.54 cm
+---------
+  1 in
+```
+
+it doesn't convert centimeters to inches because "inches is 1". It converts inches to centimeters because centimeters is on the top. Let's revsit why.
+
+Remember that you can always turn a number into a fraction. Turn your pre-converted value into a fraction:
+
+```
+ 13 in       2.54 cm
+-------  ∙  ---------
+   1          1 in
+```
+
+If the same thing is on top and bottom you can *cross it out*. Cross out the "inches" label.
+
+```
+ 13 XXX       2.54 cm
+--------  ∙  ---------
+   1           1 XXX
+```
+
+13 ∙ 2.54cm results in **33 cm**. 
+
+Anytime you arrange a conversion it looks like:
 
 ```
  begin       new units
--------  *  -----------
+-------  ∙  -----------
    1         old units
 ```
 
-**new units over old units** must be the correct relationship, like 2.54 cm for every 1 inch.
-
-Do you put centimeters or inches on top? the pattern must match this way.
+When you stack multiple conversions in the same line, the pattern must match this way.
 
 ```
  A       B       C       D
@@ -112,7 +148,7 @@ Do you put centimeters or inches on top? the pattern must match this way.
 
 This will convert from units A into units D.
 
-Practice this by chaining together a long phrase BEFORE you do any multiplication.
+Practice this by chaining together a long phrase, write it all out *before* you do any multiplication.
 
 ## Exercise: Convert measurements of your computer (10 min)
 
@@ -120,7 +156,7 @@ Practice this by chaining together a long phrase BEFORE you do any multiplicatio
 - the screen-size in Carbon atoms
 - energy consumption (watts) in terms of coal burned
 - energy consumption (watts) in terms of horsepower
-- the length of a sound wave - the average pitch for your own voice
+- the physical length of a sound wave - use the frequency of your speaking voice
 
 ### Celius and Fahrenheit
 
