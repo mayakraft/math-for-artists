@@ -4,6 +4,7 @@
 >
 > - Slides ([google slides](https://docs.google.com/presentation/d/1lrzIOAB_E7L0MyConUyJg1oFDXRQleZCd2mhDaO20VU/edit?usp=sharing))
 > - [quadratic.py](quadratic.py)
+> - [assignment](assignment.md)
 
 ## Review: Homework
 
@@ -101,7 +102,9 @@ A nice finishing move, once the pentagons are fully defined, is to pinch the edg
 
 - The precise longitude for "middle" is +/-26.6deg. this is 63.4deg from each pole, *very* close to dividing the sphere into thirds.
 
-## Polyhedra [40 min] - Platonic solids
+## Polyhedra
+
+### Platonic solids
 
 Not enough can be said about the Platonic solids. Three-dimensions is the universe we inhabit, it's our personal space, and these five shapes are the face-based mathematical primitives, the simplest and most perfect forms that exist in 3D. 
 
@@ -199,30 +202,9 @@ categories and properties
 - [Excavation](https://en.wikipedia.org/wiki/Excavated_dodecahedron)
 - [Cantellation](https://en.wikipedia.org/wiki/Cantellation_(geometry)) and [Expansion](https://en.wikipedia.org/wiki/Expansion_(geometry))
 
-## Homework: Fabricate a polyhedron
-
-There is something magical about holding a polyhedron, like you are holding something from another dimension, like Plato's realm of forms materialized. I've noticed this feeling is reinforced by a couple factors:
-
-- the durability of the object
-- the precision of the geometry
-
-Digitally explore polyhedra with [Nat Allison's Polyhedra Viewer](https://polyhedra.tessera.li/)
-
-For inspiration and instructions:
-
-- [Andrea Hawksley](http://blog.andreahawksley.com/category/math-art/)
-- [George Hart's Sculptures](https://www.georgehart.com/sculpture/sculpture.html)
-  - [Wooden polyhedra constructions](https://www.georgehart.com/virtual-polyhedra/wooden-models.html)
-  - [Paper constructions](https://www.georgehart.com/virtual-polyhedra/paper-models.html)
-  - [Slide-togethers](https://www.georgehart.com/virtual-polyhedra/slide-togethers.html)
-  - [Tensegrity](https://www.georgehart.com/virtual-polyhedra/straw-tensegrity.html)
-- [Tom Hull's Five Intersecting Tetrahedra (FIT)](http://origametry.net/fit.html)
-
-Some nets are online, though you might want to re-create them in a vector CAD program, for example to send to a laser-cutter.
-
-- [Gijs Korthals Altes's repository of polyhedra nets](https://www.polyhedra.net/en/)
-
 ### Resources
 
 - [Solids, Tom Lechner](https://www.tomlechner.com/sculptures/solids.html)
 - [Tomoko Fuse's Unit Origami](https://www.amazon.com/Unit-Origami-Multidimensional-Transformations-1990-04-15/dp/B01FIYMWDK)
+
+## Homework: [Fabricate a polyhedron](assignment.md)
