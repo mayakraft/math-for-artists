@@ -9,49 +9,56 @@
 
 ### Polynomial exercise
 
-*Q: What are **polynomials**, do they exist in the real world?*
+*Q: What are polynomials, do they exist in the real world?*
 
-Last week's homework was to create an application that will re-size a photo to aspect fit inside a rectangle of your specification; it solved one unknown (x).
+Last week's homework was to create an application that will re-size a photo to aspect fit inside a rectangle of your specification; it solved one unknown, x.
 
-A polynomial is any equation that has more than one variable, this could mean an x and a y. But now it's come to specifically represent the case when you have the same variable in more than one form (x² and x)
+A polynomial is any equation that has *more than one* variable, this could mean an x and a y. But it's come to typically represent the same variable in more than one form (x² and x).
 
-Last class we learned of Khwarizmi's proofs for degree-2 polynomials (ca. 820 AD), and how Omar Khayyam discovered solutions to degree-3 (ca 1100 AD). Let's look at a degree-2 polynomial from a few different perspectives:
+Last class we learned of Khwarizmi's proofs for degree-2 polynomials (ca. 820 AD) and how it took about 300 years before Omar Khayyam discovered solutions to degree-3 (ca 1100 AD). Let's dive into a degree-2 polynomial as a real-world problem, and solve it 2 ways:
 
-- a drawing of the physical problem
-- the equation itself
-- a graph of the equation
+- algebraic equation
+- graphing
 
 ### The problem
 
-You are building an installation, you need to fabricate a frame to be around your screen. Due to shipping, this frame can weigh **no more than 1kg**. Everyone split into groups and each group take a material: wood, aluminum, steel, plastic, glass. Everyone  will need to look up your substance's kg/cm³. Use a simple measurement of 1cm thickness for the final frame, this allows us to consider both kg/cm³ and kg/cm² as the same number. (right? because to convert from cm² to cm³, we multiply by the thickness, **which is 1**).
-
-Your job is to calculate the maximum area around the screen your frame can be. Use centimeters for everything.
-
-- *x* is the width of the frame (see below)
-- the inner frame rectangle is 25cm x 18cm
-- The maximum weight for shipping is 1kg
+You are building a screen-based installation, you need to fabricate a frame to be around your screen. Due to shipping, this frame can weigh **no more than 1kg**. The screen is an iPad: **24cm by 17cm**. You want to find the maximum size that this frame can be. Your job is to calculate **x**, the width of the frame around the screen.
 
 ```
----------------------------
-|            x            |
-|     ---------------     |
-|     |             |     |
-|  x  |             |  x  |
-|     |             |     |
-|     ---------------     |
-|            x            |
----------------------------
+                        ---------------------------
+                        |            x            |
+                        |     ---------------     |
+                        |     |             |     |
+                        |  x  |             |  x  |
+                        |     |             |     |
+                        |     ---------------     |
+                        |            x            |
+                        ---------------------------
 ```
+
+Everyone split into groups, and each group take a material:
+
+- wood
+- aluminum
+- steel
+- plastic
+- glass
+
+You need to look up your substance's kg/cm³. Let's all use a simple measurement of 1cm thickness for the final frame, this allows us to consider both kg/cm³ and kg/cm² as the same number. (right? because to convert from cm² to cm³, we multiply by the thickness, **which is 1**).
+
+Use centimeters for everything.
 
 ### Solution
 
-the solution is to build an equation for the frame by subtracting the inner from the outer. The inner is 25∙18 and the outer is the same except each of those numbers is increased by 2x.
+the solution is to build an equation for the frame by subtracting the inner from the outer. The inner is 24∙17 and the outer is the same except each of those numbers is increased by 2x.
 
-(2x + 25)(2x + 18) - 25∙18 which reduces to 4x² + 450x. What does that represent? What units are we talking about? It represents the **area** of the frame in cm².
+(2x + 24)(2x + 17) - 24∙17 which reduces to 4x² + 82x. What does that represent? What units are we talking about? It represents the **area** of the frame in cm².
 
 The last step is to set this equation equal to the maximum possible area. To get the maximum possible area we take our material weight/cm³ or weight/cm² and divide it by the 1kg allowed weight. 1000g / 2.7kg/cm³ = 370.37cm³ or cm² in our case. Write the equation below and solve it two ways: (1) quadratic equation. (2) graph the two equations (the second being f(x)=370) and look for their intersections.
 
-4x² + 450x = 370.37
+f(x) = 4x² + 82x
+
+g(x) = 370.37
 
 # Polytopes
 
@@ -123,13 +130,15 @@ dual shapes - a square. dual of octahedron is cube - the thing that tessellates 
 
 do other shapes tessellate 3d space? not regular
 
-### Construction. points in space
+### Construction
 
-imagine you are going to code one, or represent a polyhedron in some kind of medium.
+imagine you are going to represent a polyhedron in some kind of medium: code, folded paper, wooden polygons.
 
-definitions: vertices, edges, faces. the net: unfolded map of the faces of a solid.
+definitions: vertices, edges, faces
 
-can you describe the points in space? Can you imagine defining the points of the tetrahedron? from the perspective of the "Egyptian pyramid" it looks difficult, but if you turn it angled, the [points align with a cube](https://www.google.com/search?q=tetrahedron+in+a+cube&tbm=isch).
+the net: unfolded map of the faces of a solid
+
+can you describe the points in space? Can you imagine calculating the points of the tetrahedron? from the perspective of the "Egyptian pyramid" it looks difficult, but if you turn it angled, the [points align with a cube](https://www.google.com/search?q=tetrahedron+in+a+cube&tbm=isch). (reference: the golden ratio and the icosahedron/dodecahedron vertices)
 
 other properties of platonic solides
 
@@ -162,7 +171,8 @@ This is where it gets weird, stellation involves self-intersection, which can be
 a simple entry point: the [Kepler-Poinsot]([https://en.wikipedia.org/wiki/Kepler%E2%80%93Poinsot_polyhedron](https://en.wikipedia.org/wiki/Kepler–Poinsot_polyhedron))
 
 - stellate a pentagon (draw a star). can you stellate a septagon?
-- stellate a polyhedra
+
+When you draw a star, the inner pentagon's lines have been extended until they intersect another line. These lines run parallel to the pentagon's side. This is the simplest form of stellation.
 
 ### Compound polyhedra
 
@@ -185,8 +195,9 @@ categories and properties
 - [Duality](https://en.wikipedia.org/wiki/Dual_polyhedron)
 - [Cross-Polytope](https://en.wikipedia.org/wiki/Cross-polytope) the special polytopes that align with the axes of their dimension
 - Spheres that touch: [Circumsphere](https://en.wikipedia.org/wiki/Circumscribed_sphere), [Midsphere](https://en.wikipedia.org/wiki/Midsphere), and [Inscribed sphere](https://en.wikipedia.org/wiki/Circumscribed_sphere)
-- [Excavation](https://en.wikipedia.org/wiki/Excavated_dodecahedron)
 - [Tessellations (Tilings)](https://en.wikipedia.org/wiki/Tessellation) and [Honeycombs](https://en.wikipedia.org/wiki/Honeycomb_(geometry))
+- [Excavation](https://en.wikipedia.org/wiki/Excavated_dodecahedron)
+- [Cantellation](https://en.wikipedia.org/wiki/Cantellation_(geometry)) and [Expansion](https://en.wikipedia.org/wiki/Expansion_(geometry))
 
 ## Homework: Fabricate a polyhedron
 

@@ -16,7 +16,7 @@ In this class students will learn math tools to boost their digital practice, fi
 
 ## Work
 
-Students will be expected to demonstrate understanding of the material by creating projects and assignments each week, varying from computer programs to physical artworks. Students are expected to deepen their relationship to math. This class concludes with a final projec to create a work of math art. The class covers many of the dimensions of math, students should pay attention to the areas that excite them most for contenders for final projects.
+Students will be expected to demonstrate understanding of the material by creating projects and assignments each week, varying from computer programs to physical artworks. Students are expected to deepen their relationship to math. This class concludes with a final project to create a work of math art. The class covers many of the dimensions of math, students should pay attention to the areas that excite them most for contenders for final projects.
 
 ## Conduct
 
@@ -55,9 +55,9 @@ Materials provided by the university
 
 [Week 2, February 06: **Functions**](02/): transforming numbers, map, scale
 
-[Week 3, February 13: **Geometry**](03/): polyhedra and compass straight-edge
+[Week 3, February 13: **Geometry**](03/): polytopes, especially regular polyhedra
 
-Week 4, February 20: **Trigonometry**: including intersection algorithms
+Week 4, February 20: **Trigonometry**: compass straight-edge
 
 Week 5, February 27: **Linear Algebra**: matrices to represent coordinate space
 
