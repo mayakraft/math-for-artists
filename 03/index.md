@@ -3,7 +3,7 @@
 > files relating to this lecture:
 >
 > - Slides ([google slides](https://docs.google.com/presentation/d/1lrzIOAB_E7L0MyConUyJg1oFDXRQleZCd2mhDaO20VU/edit?usp=sharing))
-> - assignment
+> - [quadratic.py](quadratic.py)
 
 ## Review: Homework
 
@@ -15,7 +15,7 @@ Last week's homework was to create an application that will re-size a photo to a
 
 A polynomial is any equation that has more than one variable, this could mean an x and a y. But now it's come to specifically represent the case when you have the same variable in more than one form (x² and x)
 
-Last class we learned of Khwarizmi's proofs for degree-2 polynomials (ca. 820 AD), and how Khayyam discovered solutions to degree-3 (ca 1100 AD). Let's look at a degree-2 polynomial from a few different perspectives:
+Last class we learned of Khwarizmi's proofs for degree-2 polynomials (ca. 820 AD), and how Omar Khayyam discovered solutions to degree-3 (ca 1100 AD). Let's look at a degree-2 polynomial from a few different perspectives:
 
 - a drawing of the physical problem
 - the equation itself
@@ -53,7 +53,7 @@ The last step is to set this equation equal to the maximum possible area. To get
 
 4x² + 450x = 370.37
 
-## Polytopes
+# Polytopes
 
 ### Dimensions
 
@@ -65,11 +65,11 @@ it's very simple, we are talking about lines. line segments.
 
 ### 2D
 
-the simplest shape is a triangle. so much to be said about them, details next class.
+the simplest shape is a triangle. so much to be said about them, details in next class.
 
-the next simplest is the quadrilaterals which immediately introduces possibility for self-intersection (bowtie). This is one reason triangles are so special, we can make a lot of assumptions about them. Quads have families: parallelograms, trapezoids... Once we get to pentagons, things get complex fast and it's much easier if we focus on [regular polygons](https://en.wikipedia.org/wiki/Regular_polygon).
+the next simplest is the quadrilaterals which immediately introduces possibility for self-intersection (bowtie). This is one reason triangles are so special, we can make a lot of assumptions about them. Quads have families: parallelograms, trapezoids... Once we get to pentagons, things get complex fast and it's much easier if we focus on [regular polygons](https://en.wikipedia.org/wiki/Regular_polygon). One quick observation we can make is that there are concave and convex polygons (we like to focus on convex).
 
-Why does a square tessellate space so well? [cross polytopes](https://en.wikipedia.org/wiki/Cross-polytope)
+Why does a square tessellate space so well? (Answer to come later, when we talk about the octahedron- [cross polytopes](https://en.wikipedia.org/wiki/Cross-polytope))
 
 ### 3D
 
@@ -96,15 +96,40 @@ A nice finishing move, once the pentagons are fully defined, is to pinch the edg
 
 ## Polyhedra [40 min] - Platonic solids
 
-### 1. duality
+Not enough can be said about the Platonic solids. Three-dimensions is the universe we inhabit, it's our personal space, and these five shapes are the face-based mathematical primitives, the simplest and most perfect forms that exist in 3D. 
+
+- tetrahedron
+- octahedron
+- hexahedron
+- icosahedron
+- dodecahedron
+
+These are the only 3D shapes that are composed of the same face. They contain symmetry from many perspectives.
+
+- all faces are the same polygon
+- all points lie on the surface of a sphere
+- all angles between the faces are the same (dihedral angle)
+- if you rotate it from any angle to the next face, the figure appears similar
+
+Tell the story of Plato's Timaeus, and how early people's suspected these represented the four elements, fire earth air water, with the 5th as the universe itself. When you heat up water: Fire + Water = Air, and the three triangle-based polyhedron (tetra, icosa, octa) can re-assemble into their other forms. Cube is earth as it packs tightly, and the dodecahedron is the universe itself.
+
+Kepler's Mysterium Cosmographicum introduces the idea of circumsphere and inner-sphere (and mid-sphere). And even though Kepler was dead wrong about this theory, it further emphasizes that humans have idolized these figures for millenia. For good reason, they are beautiful.
+
+### Duality
 
 there are really only 3 symmetry groups: tetra, hexa/octa, dodeca/icosa. But they are related and it's possible to embed between them.
 
-### 2. construction. points in space
+dual shapes - a square. dual of octahedron is cube - the thing that tessellates 3D space so well.
+
+do other shapes tessellate 3d space? not regular
+
+### Construction. points in space
+
+imagine you are going to code one, or represent a polyhedron in some kind of medium.
 
 definitions: vertices, edges, faces. the net: unfolded map of the faces of a solid.
 
-can you describe the points in space?
+can you describe the points in space? Can you imagine defining the points of the tetrahedron? from the perspective of the "Egyptian pyramid" it looks difficult, but if you turn it angled, the [points align with a cube](https://www.google.com/search?q=tetrahedron+in+a+cube&tbm=isch).
 
 other properties of platonic solides
 
@@ -112,36 +137,38 @@ other properties of platonic solides
 - all points lie along the surface of a sphere
 - inradius, midradius, circumradius
 
-### 3. Truncation
+### Truncation, and the Archimedean solids
 
-### Archimedean solids (via. truncation)
+Look at the truncation from an icoahedron to a dodecahedron. It passes through the soccer-ball. *Why don't we use the other polyhedra here for sports balls?* 
 
-Face-perspective, each face is a regular polygon.
+The platonic solids require **the same** polygon for every face. If you allow combinations of different regular polygons, we expand the set of polyhedra available to us. First up is the  **13 Archimedean solids**
 
-dual shapes - a square. dual of octahedron is cube - the thing that tessellates 3D space so well.
+Q: Looking at an Archimedean solid, if we drew a circumsphere, which points lie along it? *A: all of them!* This is a requirement for the Archimedean solids. (if this wasn't required = Johnson solids)
 
-do other shapes tessellate 3d space? not regular
+Again with the face-perspective, each face is a regular polygon.
 
 Catalan Solids (duals of the Archimedean solids)
 
-Johnson solids
+### Johnson solids
+
+Any combination of regular polygons. Like a LEGO set of polygons. Any way you can snap them together is a Johnson Solid.
 
 Anti-prisms, and prisms
 
 ### Stellation
 
-Kepler-Poinsot
+This is where it gets weird, stellation involves self-intersection, which can be hard to visualize.
 
-- stellate a pentagon (draw a star). stellate a heptagon.
+a simple entry point: the [Kepler-Poinsot]([https://en.wikipedia.org/wiki/Kepler%E2%80%93Poinsot_polyhedron](https://en.wikipedia.org/wiki/Kepler–Poinsot_polyhedron))
+
+- stellate a pentagon (draw a star). can you stellate a septagon?
 - stellate a polyhedra
 
-### compound polyhedra
+### Compound polyhedra
 
-Schläfli symbols
+At this point, things can get really complex.
 
-Symmetry, rotation groups.
-
-### Wikipedia links
+## Wikipedia Rabbit-holes
 
 - [Uniform Polyhedron](https://en.wikipedia.org/wiki/Uniform_polyhedron) the category of 3D shapes we are focused on
 - [Platonic Solids](https://en.wikipedia.org/wiki/Platonic_solid)
@@ -158,39 +185,33 @@ categories and properties
 - [Duality](https://en.wikipedia.org/wiki/Dual_polyhedron)
 - [Cross-Polytope](https://en.wikipedia.org/wiki/Cross-polytope) the special polytopes that align with the axes of their dimension
 - Spheres that touch: [Circumsphere](https://en.wikipedia.org/wiki/Circumscribed_sphere), [Midsphere](https://en.wikipedia.org/wiki/Midsphere), and [Inscribed sphere](https://en.wikipedia.org/wiki/Circumscribed_sphere)
+- [Excavation](https://en.wikipedia.org/wiki/Excavated_dodecahedron)
 - [Tessellations (Tilings)](https://en.wikipedia.org/wiki/Tessellation) and [Honeycombs](https://en.wikipedia.org/wiki/Honeycomb_(geometry))
 
-### Homework: Construct a polyhedra:
+## Homework: Fabricate a polyhedron
 
-There is something magical about holding a polyhedron, like you are holding something from another dimension, like you materialized Plato's realm of forms. I've noticed this feeling depends on a couple factors:
+There is something magical about holding a polyhedron, like you are holding something from another dimension, like Plato's realm of forms materialized. I've noticed this feeling is reinforced by a couple factors:
 
 - the durability of the object
 - the precision of the geometry
 
-Look at some work by these artists:
+Digitally explore polyhedra with [Nat Allison's Polyhedra Viewer](https://polyhedra.tessera.li/)
+
+For inspiration and instructions:
 
 - [Andrea Hawksley](http://blog.andreahawksley.com/category/math-art/)
 - [George Hart's Sculptures](https://www.georgehart.com/sculpture/sculpture.html)
-- [George Hart’s references](http://www.georgehart.com/virtual-polyhedra/references.html)
-- Art by George Hart, Vi Hart, Andrea Hawksley
-- [Solids, Tom Lechner](https://www.tomlechner.com/sculptures/solids.html)
-
-Software to help vizualize:
-
-- [Nat Allison - Polyhedra](https://polyhedra.tessera.li/)
-
-Nets online:
-
-- https://www.polyhedra.net/en/ (example [Four-Cube compound](https://www.polyhedra.net/en/model.php?name-en=compound-of-four-cubes))
-
-Origami:
-
+  - [Wooden polyhedra constructions](https://www.georgehart.com/virtual-polyhedra/wooden-models.html)
+  - [Paper constructions](https://www.georgehart.com/virtual-polyhedra/paper-models.html)
+  - [Slide-togethers](https://www.georgehart.com/virtual-polyhedra/slide-togethers.html)
+  - [Tensegrity](https://www.georgehart.com/virtual-polyhedra/straw-tensegrity.html)
 - [Tom Hull's Five Intersecting Tetrahedra (FIT)](http://origametry.net/fit.html)
 
+Some nets are online, though you might want to re-create them in a vector CAD program, for example to send to a laser-cutter.
+
+- [Gijs Korthals Altes's repository of polyhedra nets](https://www.polyhedra.net/en/)
+
+### Resources
+
+- [Solids, Tom Lechner](https://www.tomlechner.com/sculptures/solids.html)
 - [Tomoko Fuse's Unit Origami](https://www.amazon.com/Unit-Origami-Multidimensional-Transformations-1990-04-15/dp/B01FIYMWDK)
-
-Materials: With origami you'll be a little more limited with your materials. 
-
-### Extra Credit
-
-Calculate dihedral angle between faces of a polyhedron, like a dodecahedron. This would help account for material-thickness in construction of solids.

@@ -55,7 +55,7 @@ Materials provided by the university
 
 [Week 2, February 06: **Functions**](02/): transforming numbers, map, scale
 
-Week 3, February 13: **Geometry**: polyhedra and compass straight-edge
+[Week 3, February 13: **Geometry**](03/): polyhedra and compass straight-edge
 
 Week 4, February 20: **Trigonometry**: including intersection algorithms
 

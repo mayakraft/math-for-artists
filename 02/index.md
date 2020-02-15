@@ -2,7 +2,6 @@
 
 > files relating to this lecture:
 >
-> - [(this file)](index.md)
 > - [assignment](assignment.md)
 > - [introduction to pure data](../documentation/pure-data-introduction.md)
 
