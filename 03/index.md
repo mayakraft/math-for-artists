@@ -1,5 +1,7 @@
 # 03: Geometry
 
+Today we begin our dive into geometry, broadly looking at shapes by their dimensions, 2D with a focus on 3D. We learn to categorize them, what it means to be *regular*, transformations upon them like truncation, and develop our vocabulary regarding properties of shapes and relationships between shapes.
+
 > files relating to this lecture:
 >
 > - Slides ([google slides](https://docs.google.com/presentation/d/1lrzIOAB_E7L0MyConUyJg1oFDXRQleZCd2mhDaO20VU/edit?usp=sharing))
@@ -106,7 +108,9 @@ A nice finishing move, once the pentagons are fully defined, is to pinch the edg
 
 ### Platonic solids
 
-Not enough can be said about the Platonic solids. Three-dimensions is the universe we inhabit, it's our personal space, and these five shapes are the face-based mathematical primitives, the simplest and most perfect forms that exist in 3D. 
+Not enough can be said about the Platonic solids. Three-dimensions is the universe we inhabit, it's our personal space, and these five shapes are the face-based mathematical primitives-the simplest and most perfect forms that exist in 3D. 
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/08/BlenderPlatonicSolids.png)
 
 - tetrahedron
 - octahedron
@@ -127,9 +131,9 @@ Kepler's Mysterium Cosmographicum introduces the idea of circumsphere and inner-
 
 ### Duality
 
-there are really only 3 symmetry groups: tetra, hexa/octa, dodeca/icosa. But they are related and it's possible to embed between them.
+the 5 Platonic solids can be reduced to 3 symmetry groups: tetra, hexa/octa, dodeca/icosa. But even these groups are related and it's possible to embed between them.
 
-dual shapes - a square. dual of octahedron is cube - the thing that tessellates 3D space so well.
+dual shapes - a square. dual of octahedron is cube - the thing that tessellates 3D space so well. (cross polytopes, this is the reason squares tessellate 2D space so well too)
 
 do other shapes tessellate 3d space? not regular
 
@@ -149,37 +153,60 @@ other properties of platonic solides
 - all points lie along the surface of a sphere
 - inradius, midradius, circumradius
 
-### Truncation, and the Archimedean solids
+### Truncation: introduction to the Archimedean solids
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/ec/Cube_truncation_sequence.svg)
+
+A [truncation](https://en.wikipedia.org/wiki/Truncation_(geometry)) is a transformation: to slice off a part of the polyhedron. A regular truncation slices all components as symmetrically as possible.
 
 Look at the truncation from an icoahedron to a dodecahedron. It passes through the soccer-ball. *Why don't we use the other polyhedra here for sports balls?* 
 
-The platonic solids require **the same** polygon for every face. If you allow combinations of different regular polygons, we expand the set of polyhedra available to us. First up is the  **13 Archimedean solids**
+The platonic solids require **the same** polygon for every face. If you allow combinations of different regular polygons, we expand the set of polyhedra available to us. First up is the  [13 Archimedean solids](https://en.wikipedia.org/wiki/Archimedean_solid)
 
 Q: Looking at an Archimedean solid, if we drew a circumsphere, which points lie along it? *A: all of them!* This is a requirement for the Archimedean solids. (if this wasn't required = Johnson solids)
 
 Again with the face-perspective, each face is a regular polygon.
 
-Catalan Solids (duals of the Archimedean solids)
+[Catalan Solids](https://en.wikipedia.org/wiki/Catalan_solid) (duals of the [Archimedean solids](https://en.wikipedia.org/wiki/Archimedean_solid))
 
 ### Johnson solids
 
 Any combination of regular polygons. Like a LEGO set of polygons. Any way you can snap them together is a Johnson Solid.
 
-Anti-prisms, and prisms
+![](http://mathworld.wolfram.com/images/eps-gif/Antiprism07_400.gif)
+
+The collection introduces a new vocabulary around naming which includes familiar terms like **pyramid**, **prism**, and perhaps less-familiar terms like **cupola**, **rotunda**, **gyro**, and **snub**. 
+
+![](http://mathworld.wolfram.com/images/eps-gif/J67Net_500.gif)
 
 ### Stellation
 
-This is where it gets weird, stellation involves self-intersection, which can be hard to visualize.
+This is where it gets weird, stellation involves self-intersection, now it's possible for the same face to appear to be in more than 1 place at a time, due to part of it being covered up.
 
-a simple entry point: the [Kepler-Poinsot]([https://en.wikipedia.org/wiki/Kepler%E2%80%93Poinsot_polyhedron](https://en.wikipedia.org/wiki/Kepler–Poinsot_polyhedron))
-
-- stellate a pentagon (draw a star). can you stellate a septagon?
+**exercise**: stellate a pentagon (draw a star), now can you stellate a septagon?
 
 When you draw a star, the inner pentagon's lines have been extended until they intersect another line. These lines run parallel to the pentagon's side. This is the simplest form of stellation.
 
+![](http://mathworld.wolfram.com/images/eps-gif/U35_500.gif)
+
+- the beginner set: the [Kepler-Poinsot](https://en.wikipedia.org/wiki/Kepler–Poinsot_polyhedron)
+
+- a [stellated octahedron](https://en.wikipedia.org/wiki/Stellated_octahedron) is a compound tetrahedron and its dual (and a [Koch snowflake](https://en.wikipedia.org/wiki/Koch_snowflake))
+- according to [J.C.P. Miller](https://en.wikipedia.org/wiki/The_Fifty-Nine_Icosahedra) the stellations of the Platonic solids are: tetrahedron (0), cube (0), octahedron (1), dodecahedron (3), and icosahedron (58)! You can also explore stellations of the Archimedean solids and their duals.
+
+![](http://mathworld.wolfram.com/images/eps-gif/U34_500.gif)
+
 ### Compound polyhedra
 
-At this point, things can get really complex.
+At this point things can get really complex, for example [the compound of 5 tetrahedra](https://en.wikipedia.org/wiki/Compound_of_five_tetrahedra) (which can be [folded](http://mars.wne.edu/~thull/fit.html)), but even in this case you should be able to see the dodecahedron. The complexity still maintains some order.
+
+- [Dual compounds](https://en.wikipedia.org/wiki/Polytope_compound#Dual_compounds) like the [compound cube and octahedron](https://en.wikipedia.org/wiki/Compound_of_cube_and_octahedron)
+
+### Summary
+
+So much more exists about polyhedra, dive into some wikipedia rabbit-holes with these sites below.
+
+In summary, these shapes point to a 
 
 ## Wikipedia Rabbit-holes
 
@@ -202,9 +229,15 @@ categories and properties
 - [Excavation](https://en.wikipedia.org/wiki/Excavated_dodecahedron)
 - [Cantellation](https://en.wikipedia.org/wiki/Cantellation_(geometry)) and [Expansion](https://en.wikipedia.org/wiki/Expansion_(geometry))
 
+![](https://upload.wikimedia.org/wikipedia/commons/0/02/Cube_cantellation_sequence.svg)
+
+*cantellation of a cube and octahedron*
+
+## Homework: [Fabricate a polyhedron](assignment.md)
+
 ### Resources
 
 - [Solids, Tom Lechner](https://www.tomlechner.com/sculptures/solids.html)
-- [Tomoko Fuse's Unit Origami](https://www.amazon.com/Unit-Origami-Multidimensional-Transformations-1990-04-15/dp/B01FIYMWDK)
+- [Tomoko Fuse's Unit Origami](https://www.amazon.com/Unit-Origami-Multidimensional-Tomoko-Fuse/dp/0870408526/ref=pd_sbs_14_1/138-6878063-7283567)
 
-## Homework: [Fabricate a polyhedron](assignment.md)
+Photo credits: [Wikipedia](https://www.wikipedia.org/), [Wolfram math world](http://mathworld.wolfram.com/)
