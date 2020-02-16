@@ -118,7 +118,7 @@ Not enough can be said about the Platonic solids. Three-dimensions is the univer
 - icosahedron
 - dodecahedron
 
-These are the only 3D shapes that are composed of the same face. They contain symmetry from many perspectives.
+These are the only 3D shapes that are composed of the same regular polygon face. They contain symmetry from many perspectives.
 
 - all faces are the same polygon
 - all points lie on the surface of a sphere
@@ -205,8 +205,6 @@ At this point things can get really complex, for example [the compound of 5 tetr
 ### Summary
 
 So much more exists about polyhedra, dive into some wikipedia rabbit-holes with these sites below.
-
-In summary, these shapes point to a 
 
 ## Wikipedia Rabbit-holes
 

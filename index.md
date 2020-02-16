@@ -38,479 +38,74 @@ Final grade is determined:
 
 All students are expected to bring a laptop to every class. We will be using free software:
 
-- pure data
-- P5.js or Processing
-- A code editor of your choice (Sublime Text, Atom, VS Code)
+- [pure data](https://puredata.info/)
+- [p5.js](https://p5js.org/) or [Processing](https://processing.org/)
+- a code editor of your choice ([Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [VS Code](https://code.visualstudio.com/))
 
 Additionally, many ideas are visual, or conceptual but benefit from visualization, it will be **very helpful** if students come to class with paper and some type of writing utensil.
 
 Materials provided by the university
 
-- molding clay (day 3)
-- compasses (day 3)
+- molding clay (week 3)
+- compasses (week 4)
 
 # Class Overview
 
-[Week 1, January 30: **Numbers**](01/): history of math, counting systems, prime factors
+### Week 1, January 30: [Numbers](01/)
 
-[Week 2, February 06: **Functions**](02/): transforming numbers, map, scale
+history of counting systems and numerals, alternate number bases, integer divisors, prime factors, class activity: measure pi to as many decimal places *assignment: counting visualization*
 
-[Week 3, February 13: **Geometry**](03/): polytopes, especially regular polyhedra
+### Week 2, February 06: [Functions](02/)
 
-Week 4, February 20: **Trigonometry**: compass straight-edge
+History of the Abassid period, Khwarizmi, algebra review, reducing, identity elements, unit conversion, linear transforms and shifting the origin, introduction to Pure Data, models for functions as transformations on numbers, the graph is not Euclidean space.
 
-Week 5, February 27: **Linear Algebra**: matrices to represent coordinate space
+### Week 3, February 13: [Geometry](03/)
 
-Week 6, March 05: **Linear Algebra**: methods on vectors
+Polytopes by dimension, the history of the Platonic solids and their 3 symmetry groups, scuplting a dodecahedron, dual polyhedra, vertex/edge/face definition, unfolded nets, circum/inner/midspheres, truncation, the Archimedean solids, Johnson solids, stellation. 
 
-Week 7, March 12: **Linear Algebra**: applications for 3D space and machine learning
+### Week 4, February 20: Trigonometry
+
+Compass straight-edge constructions, deriving trigonometric functions, coordinate frames, properties of triangles, repurposing sine functions for animations, atan2, distance formula, tilings and tessellations
+
+### Week 5, February 27: Linear Algebra
+
+introduction to vectors, coordinate spaces in matrix form, linear transformations with a fixed origin, matrix algebra
+
+### Week 6, March 05: Linear Algebra
+
+methods on vectors, matrices, screen-to-world transforms and visa-versa, manipulate space with matrices, the matrix stack, how does AR work? orientation representations: Euler angles and quaternions, distance formula and trigonometry in 3D, 3D rotation math.
+
+### Week 7, March 12: Linear Algebra
+
+applications for 3D graphics, create a 3D environment (WebGL) that tracks with a phone's orientation, shader math.
 
 *Spring Break, March 19: no class*
 
-Week 8, March 26: **Logarithms**: build an intuition for logarithmic thinking
+### Week 8, March 26: Logarithms
 
-Week 9, April 02: **Audiovisual**: create and modify audio signals, understand color space
+develop our intuition for logarithmic thinking, linear and log scales, exponential sequences, audio frequencies.
 
-Week 10, April 09: **Fourier Systems**: FFT and linkages
+### Week 9, April 02: Audiovisual
 
-Week 11, April 16: **Randomness, Noise, Distortion**: types of noises, understand file compression
+human audio hearing range, Nyquist frequency and bit-rate, compression, timbre, signal processing, spectrograms, synthesis, filters, color spaces.
 
-Week 12, April 23: **Number Shaping**: practical applications, advanced reparameterization methods
+### Week 10, April 09: Fourier Systems
 
-Week 13, April 30: **Boolean Algebra**: algebraic operations with applications for if-statements
+Fourier series, Fourier synthesis, FFT, oscilloscopes, linkages, sine waves: amplitude, frequency, phase, operations on waves, addition, multiplication
 
-Week 14, May 07: **Final Presentations**
+### Week 11, April 16: Randomness, Noise, Distortion
 
-# Class Meetings
+White brown and pink noises, Brownian motion, drunk walk, seeding a random number generator, randomness in visual art, aleatoric music, algorists and Fluxus, Kolmogorov complexity, lossless representations, image compression (JPEG) and discrete cosine transform, image bit-resolution. 
 
-## Week 1, January 30: Numbers
+### Week 12, April 23: Number Shaping
 
-### History
+practical applications, advanced reparameterization methods
 
-history of counting, measurement, alternate counting systems, Hellenistic geometry, the history of proofs, Euclid, numerals and the Gupta empire, early ties to astronomy, algorithms and the Islamic golden age.
+### Week 13, April 30: Boolean Algebra
 
-### Classwork
+algebraic operations with applications for if-statements
 
-measure pi to as many decimal places as possible. use anything on the ITP floor.
-
-### Lecture
-
-Establish a vocabulary around natural, whole, rational, irrational numbers, and fractions. Introduce these as set notation.
-
-Explore alternate number bases/radix. How do number bases behave differently? Do these alter your perception of a number? Explore the patterns in divisors, especially in the context of alternate number bases. The importance of prime numbers.
-
-Demonstrate divisors and alternate number bases as musical rhythms.
-
-### Code
-
-- prime factorization
-
-### Homework
-
-Visulize or sonify an alternate number base or patterns among divisors.
-
-### References
-
-- [Michael Fogleman Prime Factors Poster](https://store.michaelfogleman.com/products/prime-factors)
-- Prime number visualizations
-- [Paul Bourke binary fractal](http://paulbourke.net/fractals/squaretile/)
-
-## Week 2, February 6: Functions
-
-### Lecture
-
-A review of algebra, Al-Khwarizmi. The two sides of an equal sign and techniques for moving things from one side to the other (mixing multiplication, addition, exponents). Unit conversion as a sequence of fractions.
-
-The modulus operator. associative and communicative.
-
-### Classwork
-
-Using a calculator shrink a rectangle and preserve aspect ratio. Demonstrate skill with ratios.
-
-### Software
-
-Arithmetic and functions in Pure Data
-
-### Lecture
-
-Transforming numbers, variable types, inputs and outputs, the number line, the dataflow language function model (pd, max-msp), function as black-box. functions-as-code model.
-
-What is a graph?-and why it's easy to confuse with Euclidean space.
-
-### Classwork
-
-Code the map function
-
-A big takeaway from today is that we can scale the numberline, but a scaling operation's origin is fixed at zero. Addition and subtraction are needed to shift the origin.
-
-### Homework
-
-Create a random number generator in pure data. Transform a seed input to a sufficiently random output.
-
-### Reference
-
-[Kazu Harada](https://www.pinterest.com/CMTpins/kazu-harada/), especially their functions boxes.
-
-## Week 3, February 13: Geometry
-
-### Classwork
-
-Sculpt a dodecahedron out of clay
-
-### Lecture
-
-Introduction to polyhedra. (regular polytopes in n-dimensions). Platonic, Archimedean, Johnson, and Catalan solids. truncation. anti-prisms. duality. stellation. cross-polytopes. The three solids symmetry groups: tetra, hexa/octa, dodeca/icosa, and ways of embedding between them. 
-
-A closer look at some of the math including naming conventions around faces vs. vertices. VEF relationship. dihedral angle. formula for the vertices of the platonic solids and the golden ratio inside the icosa/dodeca. Schläfli symbols. Symmetry, rotation groups.
-
-### Classwork
-
-Using compass-straightedge construct:
-
-- hexagon
-- pentagon
-- bisect/trisect an angle
-
-### Lecture
-
-Euclid's elements and compass-straightedge constructions. construction techniques
-
-### Homework
-
-Fabricate a polyhedron
-
-Compass straight-edge a geometric tessellation
-
-### Reference
-
-- [Adam Williamson](https://www.adamwilliamson.com/biomorphs/)
-- [George Hart’s references](http://www.georgehart.com/virtual-polyhedra/references.html)
-- Art by George Hart, Vi Hart, Andrea Hawksley
-- [Solids, Tom Lechner](https://www.tomlechner.com/sculptures/solids.html)
-- Tom Hull's Intersecting tetrahedra (FIT)
-
-### Extra Credit
-
-Calculate dihedral angle between faces of a polyhedron, like a dodecahedron. This would help account for material-thickness in construction of solids.
-
-## Week 4, February 20: Trigonometry
-
-### Classwork
-
-Find a circle that goes through three points
-
-### Lecture
-
-Euclidean space. Establishing a coordinate frame, including polar coordinates, barycentric coordinate system, cylindrical coordinates. Introduction to geometric algorithms, and a lot of information about triangles.
-
-Mapping to a sine curve.
-
-### Classwork
-
-Code a circle using sine, cosine
-
-### Lecture
-
-compass straightedge solutions. Euclid. tilings, creating tessellations. distance formula (Pythagoras)
-
-### Classwork: intersection algorithms
-
-- circle-circle (the distance formula)
-- line-line (segment-segment) (this will be hard)
-
-### Lecture: Trigonometry
-
-Every little thing about triangles. atan2(), distance formula. Convex-polygon overlap collision detection. All the different centers of a triangle. Sine, cosine (for the FFT)
-
-### References
-
-- [Journey to the Center of a Triangle, Bruce & Katharine Cornwell](https://www.youtube.com/watch?v=v_oZ9Pe0yRg)
-- [Paul Bourke, Geometry](http://paulbourke.net/geometry/)
-
-### If there is time
-
-code a math rose. (polar coords)
-
-## Week 5, February 27: Linear Algebra
-
-Vectors and scalars. Line representations: (point, vector) (point, point) (vector, scalar-distance-to-center)
-
-### Lecture: intersection algorithms pt. 2
-- circle-circle (now with collision detection. a vector to express repel-direction)
-- line-line (segment-segment)
-- point-in-polygon, convex polygons
-- poly-poly, line-poly
-
-### Lecture: computer graphics pt. 1
-
-coordinate system as matrices. affine transforms.
-
-### Classwork
-
-scale a polygon in SVG only using a matrix
-
-### References
-- Measurement by Paul Lockhart, section 2 Time and Space.
-- 3blue1brown essence of linear algebra, first 3 videos. (30 minutes)
-- [Paul Bourke, Geometry](http://paulbourke.net/geometry/)
-
-## Week 6, March 5: Linear Algebra
-
-### Lecture: computer graphics
-
-matrices, screen-to-world transforms and visa-versa. manipulate space with matrices. the matrix stack, how does AR work?
-
-- orientation, Euler angles, quaternions. distance formula and trigonometry in 3D. 3D rotation math.
-
-### Lecture
-
-Dot and Cross products
-
-### References
-
-- 3blue1brown essence of linear algebra
-
-## Week 7, March 12: Linear Algebra
-
-### Exercise
-
-create a 3D environment (WebGL) that tracks with the orientation sensors of your mobile device
-
-### Lecture
-
-Linear algebra in shaders, machine learning.
-
-### References
-
-- 3blue1brown essence of linear algebra
-
-## Spring Break, March 19
-
-no class
-
-## Week 8, March 26: Logarithms
-
-### Lecture
-
-Review on exponents.
-
-"What number is halfway between 1 and 9?", how logarithmic thinking is innate and unlearned. This informs the nature of human senses, audio and visual, the mathematical relationship between musical pitches, and noise and compression.
-
-### Classwork
-
-Explore logarithms by folding the Fibonacci sequence and deriving the golden ratio. We convert between linear and log scales, plot the Fibonacci sequence. n^x and log() can be used to convert between linear and logarithmic.
-
-- arithmetic vs. geometric
-- arithmetic mean vs. geometric mean
-
-Fibonacci (and other exponential) sequences, log graphs, infinite series approximations, the golden, silver ratios, logarithm in senses: audial, visual, haptic
-
-### Homework
-
-Construct a linear representation of a logarithmic situation (example: a map of the solar system with correct positions of the planets)
-
-### References
-
-- Stanislas Dehaene
-- Randall Munroe’s logarithmic maps
-
-## Week 9, April 2: Audiovisual
-
-### Lecture
-
-human audio hearing range. frequency vs. timbre, consonance and dissonance, synthesis, filters. frequency spectrogram.
-
-information limits. Nyquist frequency. audio bit-rate. what does low bit-rate sound like? compression in both visual and audio, quantization
-
-### Classwork
-
-Coding music by frequency in Pure Data
-
-### Lecture
-
-- color space. 3-space. (cylindrical coordinate system). additive and subtractive colors.
-
-## Week 10, April 9: Fourier Systems
-
-### Lecture
-
-Fourier series, Fourier synthesis, FFT. Oscilloscopes. Linkages. Kempe’s Universality theorem
-
-sine waves: amplitude, frequency, phase. operations on waves, addition, multiplication. the conversion of complex information into lightweight by fourier representation.
-
-### Classwork
-
-Linkages, Fourier drawing.
-
-### References
-
-[Toby Schachman Shadershop](http://tobyschachman.com/Shadershop/)
-
-[@ChocoLinkage](https://twitter.com/ChocoLinkage)
-
-## Week 11, April 16: Randomness, Noise, Distortion
-
-### History
-
-1970’s, algorists employing randomness especially in visual art. Aleatoric music. Fluxus
-
-computer’s pseudo random generator, testing random number generators
-
-### Lecture
-
-White noise, brown noise, pink noise, Brownian motion, drunk walk, seeding a random number generator
-
-### Classwork
-
-simplex noise
-
-### Lecture
-
-Kolmogorov complexity, lossless representations. 
-
-pixels. image bit-resolution. image compression (JPEG). discrete cosine transform.
-
-### References
-
-- The Book of Shaders- [Random](https://thebookofshaders.com/10/) + [Noise](https://thebookofshaders.com/11/)
-- John D. Cook, "Testing a Random Number Generator”
-
-----------
-
-### Week 11 - Begin planning final projects
-
-----------
-
-## Week 12, April 23: Number shaping
-
-### Lecture
-
-the importance of the UNIT interval. between 0...1
-
-SHAPING: example: random int between (13, 128) but, anything past 50 is unrecognizably similar, we need to front-load these numbers. more up front less in the back (this is the limits of map function ability)
-
-### Lecture
-
-reparameterize a domain, for example, convert to arc-length parameterization
-
-### Software
-
-What's inside of math libraries? NumPy, Boost.
-
-### Lecture
-
-discrete vs. continuous animation. animation curves. relating the output of Grapher with animations.
-
-## Week 13, April 30: Boolean Algebra
-
-### History
-
-Math in 19th century: Boole's work and the algebra of propositional logic. Subsequent work by Charles Sanders Peirce and Gottlob Frege on quantifiers.
-
-### Lecture
-
-order. emergence, weak and strong. state machines.
-
-Boolean Algebra:
-
-- boolean operations, duality, reduction. `( a` `**&& b**` `) == !( a` `**|| b**` `)`
-- logic gates
-- finite automata
-
-### Lecture
-
-this discussion is entirely about epsilons, floating point comparison, range of error, weird ways that math becomes corrupted when simulated on a computer.
-
-- floating points need to be cropped
-- arbitrary decisions we've had to make (row vs column order matrices)
-- dividing integers
-
-### References
-
-George Boole, *"An Investigation into the Laws of Thought on Which are Founded the Mathematical Theories of Logic and Probabilities"*
-
-Ernst Schröder
-
-## 14. Final Presentations
-
----
-
-## Bonus Material: Folding
-
-### Lecture
-
-Origami axioms and relationships to Hellenistic compass ruler geometry.
-
-### Lecture
-
-Crumpling paper. crease patterns. graphs and planar graphs. Kawasaki’s and Maekawa’s theorems. circle packing, uniaxial tree design. origami tessellations, tiling.
-
-### Classwork
-
-create a tiling origami twist. fold it.
-
-origami package design. origami collapsible living structures.
-
-### Homework
-
-origami tessellation
-
-### Source
-- [Ron Resch Paper and Stick Film](https://vimeo.com/36122966)
-- [Geometric Folding Algorithms, MIT OCW](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/)
-- [Geometric Folding Algorithms the book](https://www.google.com/books/edition/Geometric_Folding_Algorithms/ycYLAQAAQBAJ)
-- [Twists Tilings and Tessellations, Robert Lang](https://www.amazon.com/Twists-Tilings-Tessellations-Mathematical-Geometric/dp/1138563064)
-
-### Strange Surfaces
-
-- knots, orientable surfaces, möbius strip, donuts. Higher dimensional regular polytopes.
-- 4D projections into 3D, shadows, slicing. Flatland. translation between dimensions. Henry Segerman
-- higher dimensions and machine learning.
-
-### Sources
-
-- Flatland
-- [Henry Segerman](https://math.okstate.edu/people/segerman/)
-- [Mike Tanis](https://www.instagram.com/miketanis_/)
-- [Alison Martin](https://www.flickr.com/photos/109333486@N07/albums)
-- [Andrea Hawksley](http://octahedralgroup.org/blog/topologically-interesting-felt/)
-
-## Bonus Material: Algorithms
-
-### History
-
-Math in early 20th century: Hilbert, Russell, Gödel, and Turing. the paradigm shift of the 20th century- algorithms can easily be looped millions of times. memory storage is theoretically infinite, Turing tape.
-
-### Lecture
-
-Formal grammars, regular expressions, Aristid Lindenmayer and plant growth patterns, finite Automata, string-rewrite systems, L-systems.
-
-### Reading
-
-- [Examples of L-Systems, Wikipedia](https://en.wikipedia.org/wiki/L-system#Examples_of_L-systems)
-
-### Classwork
-
-it’s possible to make the same fractal (dragon, Sierpinski) using a variety of methods
-
-- l-systems
-- elementary cellular automata
-- recursive draw call
-- origami
-
-### Classwork
-
-create a Voronoi diagram using origami
-
-### Classwork
-
-elementary cellular automata
-
-### Lecture
-
-Algorithms at scale. Encryption. Units of algorithm time: big-o. NP Hardness. non-invertible functions. one way functions.
-
-- classes of algorithms like divide and conquer
+### Week 14, May 07: Final Presentations
 
 ---
 

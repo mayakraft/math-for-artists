@@ -1,3 +1,5 @@
+# Assignment 2
+
 ### Aspect ratio tool
 
 Create a tool to solve all your image-scaling needs. This tool will scale one rectangle to fit another. Your code is going to need to be able to ask the question: *is the width or the height the limiting factor?* Two takes on the assignment: beginner and advanced:

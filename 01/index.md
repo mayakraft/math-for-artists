@@ -46,17 +46,21 @@ Very quickly, let's talk about why do we count the way we count.
 14 🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
 ```
 
-Focus on two lines: 9 and 10. This line marks the moment that single digits turn into double. What's the difference between these two sets of apples? There is no difference in the apples! This decision to switch to double digits here is entirely arbitrary (it's because of our 10 fingers).
+Look at lines 9 and 10. This line marks the moment that single digits turn into double. What's the difference between these two sets of apples? There is no difference in the apples! This decision to switch to double digits here is entirely arbitrary (it's because of our 10 fingers). We could have grown up in a universe where this division happened at 8 or 12.
 
-We could have grown up in a universe where this division happened at 8 or 12. If it was 12, we would need to invent new glyphs, single characters to represent ten, another for eleven. Would an alternative number base change our relationship to math?
+If we used base-12 (anything higher than 10), we would need to invent new glyphs, single characters to represent ten, another for eleven.
+
+*Would an alternative number base change the way we see a certain number?*
 
 How many numbers divide into 10? **2, 5**
 
 How many numbers divide into 12? **2, 3, 4, 6**
 
+*Would an alternative number base change our relationship to math?*
+
 ## Number Bases
 
-The number we know as ninty-nine in four different number bases:
+There is a kind of a balance I'd like you to observe. Here is the number we know as ninty-nine in four different number bases:
 
 - 1100011 (binary)
 - 143 (base-8)
@@ -87,7 +91,7 @@ What numbers can be divided in half and result in a whole number? in thirds? *12
 
 Of course it's true that any number can be divided by any number*, but the question we keep circling around is *"does the division result in a **whole number**?"*
 
-*not zero
+*not zero*
 
 The name for these are **divisors**. 12 can be divided by 3, resulting in 4. Both 3 and 4 are *divisors* of 12.
 
@@ -166,7 +170,9 @@ Now we should be able to appreciate the details behind some of these artworks ar
 
 Show artwork by math artists that exhibit prime factorizations. My selections were Michael Fogleman, Jason Davies, Edmund Harriss, Paul Bourke, Nicholas Rougeux, and an Ulam's spiral from Wikipedia.
 
-## Group Activity
+## Group Activity:
+
+Measure PI to as many decimal places as possible.
 
 PI is the ratio of the circumference to the diameter (draw a diagram). Find a circle. Chop a piece of string that measures exactly across the diameter, then laid the string end to end measuring the circumference.
 

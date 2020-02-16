@@ -84,14 +84,14 @@ look especially at those last three, why didn't Khwarizmi simply write them as o
 
 Quadratics were the extent of algebra at the time, 820AD, it took another few hundred years until the solution to cubics was discovered by Omar Khayyam at around 1100 AD.
 
-## Identity operations
+## Identity elements
 
-In linear algebra, we'll be learning about the identity matrix. When you multiply something by the identity matrix, you get back that thing. Identity operations exist for all operands.
+In linear algebra, we'll be learning about the identity matrix. When you multiply something by the identity matrix, you get back that thing. [Identity elements](https://en.wikipedia.org/wiki/Identity_element) exist for all operands.
 
-- a + 0 = a
-- a ∙ 1 = a
+- x + 0 = x
+- x ∙ 1 = x
 
-for addition and subtraction, the identity quantity is 0 and 1 respectively. These seem like trivial cases, but it gets more fun when you use alternate representations of each. For example:
+for addition and subtraction, the identity value is 0 and 1 respectively. These seem like trivial cases, but it gets more fun when you use alternate representations of each. For example:
 
 ```
        2.54 cm
