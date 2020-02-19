@@ -57,53 +57,53 @@ history of counting systems and numerals, alternate number bases, integer diviso
 
 ### Week 2, February 06: [Functions](02/)
 
-History of the Abassid period, Khwarizmi, algebra review, reducing, identity elements, unit conversion, linear transforms and shifting the origin, introduction to Pure Data, models for functions as transformations on numbers, the graph is not Euclidean space.
+History of the Abassid period, Khwarizmi, algebra review, reducing, identity elements, unit conversion, linear transforms and shifting the origin, introduction to Pure Data, functions-transformations on numbers, the graph is not Euclidean space
 
 ### Week 3, February 13: [Geometry](03/)
 
-Polytopes by dimension, the history of the Platonic solids and their 3 symmetry groups, scuplting a dodecahedron, dual polyhedra, vertex/edge/face definition, unfolded nets, circum/inner/midspheres, truncation, the Archimedean solids, Johnson solids, stellation. 
+Polytopes by dimension, the history of the Platonic solids and their 3 symmetry groups, scuplting a dodecahedron, dual polyhedra, vertex/edge/face definition, unfolded nets, circum/inner/midspheres, truncation, the Archimedean solids, Johnson solids, stellation
 
 ### Week 4, February 20: Trigonometry
 
-Compass straight-edge constructions, deriving trigonometric functions, coordinate frames, properties of triangles, repurposing sine functions for animations, atan2, distance formula, tilings and tessellations
+Compass straight-edge constructions, centers of triangles, coordinate frames, deriving trigonometric functions, the unit circle, distance formula, atan2, tilings and tessellations
 
 ### Week 5, February 27: Linear Algebra
 
-introduction to vectors, coordinate spaces in matrix form, linear transformations with a fixed origin, matrix algebra
+introduction to vectors, vector arithmetic, span and invalid coordinate spaces, transformations as matrices, transformations that involve shifting the origin, matrix algebra, dot and cross product, line segment intersection
 
 ### Week 6, March 05: Linear Algebra
 
-methods on vectors, matrices, screen-to-world transforms and visa-versa, manipulate space with matrices, the matrix stack, how does AR work? orientation representations: Euler angles and quaternions, distance formula and trigonometry in 3D, 3D rotation math.
+OpenGL and projection matrices, screen-to-world transforms and visa-versa, the matrix stack, SLAM AR matrices, alternate representations of transforms including Euler angles and quaternions, the gimball lock problem, distance formula and trigonometry in 3D, 3D rotation math.
 
 ### Week 7, March 12: Linear Algebra
 
-applications for 3D graphics, create a 3D environment (WebGL) that tracks with a phone's orientation, shader math.
+create a 3D environment (WebGL) that tracks with a phone's orientation, creating 3D projections of 4D space. modling non-euclidean spaces in game engines, shaders
 
-*Spring Break, March 19: no class*
+#### *Spring Break, March 19: no class*
 
 ### Week 8, March 26: Logarithms
 
-develop our intuition for logarithmic thinking, linear and log scales, exponential sequences, audio frequencies.
+logarithmic thinking, linear and log scales, exponential sequences, exponential growth in the real world, Fibonacci sqeuences and the golden ratio and plants, the hearing scale is logarithmic
 
 ### Week 9, April 02: Audiovisual
 
-human audio hearing range, Nyquist frequency and bit-rate, compression, timbre, signal processing, spectrograms, synthesis, filters, color spaces.
+operations on sine waves, spectrograms, filters, timbre, synthesis, color spaces, image compression (JPEG) and discrete cosine transform, image bit-resolution, Nyquist frequency and bit-rate, compression, Kolmogorov complexity, lossy and lossless conversions
 
-### Week 10, April 09: Fourier Systems
+### Week 10, April 09: Fourier
 
-Fourier series, Fourier synthesis, FFT, oscilloscopes, linkages, sine waves: amplitude, frequency, phase, operations on waves, addition, multiplication
+Fourier series, Fourier synthesis, FFT, oscilloscope art, signal processing, linkages, repurposing sine functions for animating visual art
 
-### Week 11, April 16: Randomness, Noise, Distortion
+### Week 11, April 16: Statistics
 
-White brown and pink noises, Brownian motion, drunk walk, seeding a random number generator, randomness in visual art, aleatoric music, algorists and Fluxus, Kolmogorov complexity, lossless representations, image compression (JPEG) and discrete cosine transform, image bit-resolution. 
+numpy + Jupyter notebooks, k-means-clustering, P-NP complexity, Newton's method, converging to local minima, types of noise, seeding a random number generator, shaping random numbers in visual art
 
-### Week 12, April 23: Number Shaping
+### Week 12, April 23: Complex Numbers
 
-practical applications, advanced reparameterization methods
+imaginary axis of the number line, cartesian and polar forms, implementation of algorithms in math art, fractals
 
-### Week 13, April 30: Boolean Algebra
+### Week 13, April 30: Computational Geometry
 
-algebraic operations with applications for if-statements
+Shaders, GPU programming, ray marching, signed distance functions, NURBS, OBJ format, searching and sorting space, partitioning
 
 ### Week 14, May 07: Final Presentations
 
