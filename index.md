@@ -63,7 +63,7 @@ History of the Abassid period, Khwarizmi, algebra review, reducing, identity ele
 
 Polytopes by dimension, the history of the Platonic solids and their 3 symmetry groups, scuplting a dodecahedron, dual polyhedra, vertex/edge/face definition, unfolded nets, circum/inner/midspheres, truncation, the Archimedean solids, Johnson solids, stellation
 
-### Week 4, February 20: Trigonometry
+### Week 4, February 20: [Trigonometry](04/)
 
 Compass straight-edge constructions, centers of triangles, coordinate frames, deriving trigonometric functions, the unit circle, distance formula, atan2, tilings and tessellations
 
@@ -97,9 +97,9 @@ Fourier series, Fourier synthesis, FFT, oscilloscope art, signal processing, lin
 
 numpy + Jupyter notebooks, k-means-clustering, P-NP complexity, Newton's method, converging to local minima, types of noise, seeding a random number generator, shaping random numbers in visual art
 
-### Week 12, April 23: Complex Numbers
+### Week 12, April 23: Computational Geometry
 
-imaginary axis of the number line, cartesian and polar forms, implementation of algorithms in math art, fractals
+Complex numbers, imaginary axis of the number line, cartesian and polar forms, implementation of algorithms in math art, fractals
 
 ### Week 13, April 30: Computational Geometry
 
