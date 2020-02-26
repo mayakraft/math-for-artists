@@ -67,13 +67,13 @@ Polytopes by dimension, the history of the Platonic solids and their 3 symmetry 
 
 Compass straight-edge constructions, centers of triangles, coordinate frames, deriving trigonometric functions, the unit circle, distance formula, atan2, tilings and tessellations
 
-### Week 5, February 27: Linear Algebra
+### Week 5, February 27: [Linear Algebra](05/)
 
-introduction to vectors, vector arithmetic, span and invalid coordinate spaces, transformations as matrices, transformations that involve shifting the origin, matrix algebra, dot and cross product, line segment intersection
+introduction to vectors, vector arithmetic, span and invalid coordinate spaces, transformations as matrices, transformations that involve shifting the origin, matrix arithmetic, composition matrices
 
 ### Week 6, March 05: Linear Algebra
 
-OpenGL and projection matrices, screen-to-world transforms and visa-versa, the matrix stack, SLAM AR matrices, alternate representations of transforms including Euler angles and quaternions, the gimball lock problem, distance formula and trigonometry in 3D, 3D rotation math.
+Dot and cross product, line segment intersection. OpenGL and projection matrices, screen-to-world transforms and visa-versa, the matrix stack, SLAM AR matrices, alternate representations of transforms including Euler angles and quaternions, the gimball lock problem, distance formula and trigonometry in 3D, 3D rotation math.
 
 ### Week 7, March 12: Linear Algebra
 

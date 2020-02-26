@@ -8,11 +8,11 @@ Today we continue our dive into geometry with a focus on 2D, triangles, and trig
 >
 > scissors: we need to cut a triangle (for folding)
 
-## Compass and Straightedge Constructions
+## Compass and Straightedge Constructions (45 min)
 
 on Plato's realm of forms.
 
-As we carve out 2-dimensional space on our paper, we're grasping at another dimension just out of reach. Underneath our circle is a perfect circle, *the form of a circle*, nearly captured on our paper between the fibers and bits of ink. Even if our incantation is imperfect, we get better each time. We're after something pure and ultimately un-capturable. But if we get close enough, we trick our senses, and for a second we believe that we're looking at something out of this world.
+As we carve out 2-dimensional space on our paper, we're grasping at another dimension just out of reach. Underneath our circle is a perfect circle, *the form of a circle*, nearly captured on our paper between the fibers and bits of charcoal. Even if our incantation is imperfect, we get better each time. We're after something pure and ultimately un-capturable. But if we get close enough, we trick our senses, and for a second we believe that we're looking at something out of this world.
 
 [Sesame Street's Geometry of Circles](https://muppet.fandom.com/wiki/Geometry_of_Circles)
 
@@ -63,7 +63,7 @@ given 1 line (length: 1) extend it so the new length is the square root of two.
 
 given 1 line (length: 1) extend it so the new length is the square root of three. if helpful give the hint that the square root of three is the vertical length of an equillateral triangle.
 
-## Triangle Centers
+## Triangle Centers (30 min)
 
 [Journey to the Center of a Triangle, Bruce & Katharine Cornwell](https://www.youtube.com/watch?v=v_oZ9Pe0yRg)
 
@@ -79,7 +79,7 @@ the balancing point - fold midpoints on the edges, fold the opposite to the midp
 
 ### Circumcenter
 
-Fold a Voronoi, then complete the delaunay triangulation. 
+**Voronoi exercise**: on a letter sized sheet of paper make 5-7 randomly spaced marks. use origami axiom 2 to add fold lines that trace a Voronoi diagram. Complete the Voronoi diagram, then with a pencil, draw the delaunay triangulation. Now it's possible to show the triangle circumcenters by placing the compass at the Voronoi intersection with a radius to the cell site, draw the circle, and it will pass through 3 cell sites, the vertices of the Delaunay triangle.
 
 **the right triangle game**: cut out a triangle that is VERY close to a right triangle (but eyeball it so it should be off by a tiny fraction) fold the angle bisectors to get the circumcenter. circumcenter tells you if a triangle is acute / right / obtuse
 
@@ -99,10 +99,13 @@ Show that the Euler line passes through all 3 points. what are the centers for a
   - inscribe a circle in a square
   - inscribe a square in another square, with a vertex at a point
 
-## History
+![](https://images-na.ssl-images-amazon.com/images/I/51IWLWrhwLL.jpg)
 
-[Hipparchus](https://en.wikipedia.org/wiki/Hipparchus)
+## Sine, Cosine, Tangent (1 hour)
 
+### History
+
+[Hipparchus](https://en.wikipedia.org/wiki/Hipparchus) and the table of secants
 
 [Pythagorean Triples](https://en.wikipedia.org/wiki/Pythagorean_triple) are whole numbers that satisfy Pythagorean's theorem: 3x4x5, 5x12x13
 
@@ -112,7 +115,55 @@ Is it possible to "square the circle"?
 
 Can you trisect an angle? (Can you construct an angle of 20°?) (you can with origami!)
 
-## Derive Sine and Cosine
+## Coordinate systems
+
+### distance formula
+
+let's begin with the distance formula. make a note that this works whether or not we are in agreement WHERE the axes are aligned, only that they are orthogonal to each other.
+
+with this we can establish the formula for a circle
+
+### 1 = x² + y²
+
+and if we rearrange the expression we can graph the equation: **y = √(1 - x²)**. Code a circle without using sine and cosine functions:
+
+```javascript
+background("white", true);
+size(-1, -1, 2, 2);
+
+for (var i = -100; i <= 100; i++) {
+  var x = i / 100;
+  var y = Math.sqrt(1 - (x ** 2));
+  circle(x, y, 0.01)
+  circle(x, -y, 0.01)
+}
+```
+
+now if we use sine and cosine
+
+```javascript
+for (var i = 0; i < 100; i++) {
+	var a = i / 100 * Math.PI * 2;
+  circle(Math.cos(a), Math.sin(a), 0.01);
+}
+```
+
+Cartesian and polar coordinates, and conversion between the two.
+
+### Radians vs. Degrees
+
+radians.
+
+### Derive Sine and Cosine
+
+```javascript
+for (var i = 0; i <= 360; i++) {
+  var a = i / 360 * Math.PI * 2;
+  var x = Math.cos(a)
+  var y = Math.sin(a);
+  circle(x, y, 0.01).fill("hsl("+i+",50%, 50%)")
+}
+```
 
 first draw the cords. these are the secants
 
@@ -120,8 +171,8 @@ first draw the cords. these are the secants
 size(-2, -2, 4, 4);
 background("white", true);
 
-for (var i = 0; i <= 100; i++) {
-  var a = i / 100 * Math.PI * 2;
+for (var i = 0; i <= 360; i++) {
+  var a = i / 360 * Math.PI * 2;
   var x = Math.cos(a)
   var y = Math.sin(a);
   circle(x, y, 0.01)
@@ -158,39 +209,9 @@ for (var i = 0; i <= 100; i++) {
 }
 ```
 
-## Coordinate systems
-
-Cartesian and polar coordinates, and conversion between the two.
-
-### sine, cosine
-
 sine and cosine are *ratios*. ratios between two lengths.
 
-### atan2
-
-why atan2 works. what is tangent anyway? (is it related to drawing a circle?)
-
-### distance formula
-
-how do you draw a circle in code?
-
-### common trig problems encoutered by media artists
-
-bisect 2 angles in code
-
-calculate the clockwise (or counter clockwise) interior angle from one to the next.
-
-```javascript
-// my solution to the problem
-function clockwise_angle (a, b) {
-  while (a < 0) { a += Math.PI * 2; }
-  while (b < 0) { b += Math.PI * 2; }
-  var a_b = a - b;
-  return (a_b >= 0)
-    ? a_b
-    : Math.PI * 2 - (b - a);
-};
-```
+![](https://media.giphy.com/media/NKLdcqhwo2f8A/source.gif)
 
 ### Classwork
 
@@ -202,43 +223,41 @@ Calculate the diameter of the Earth
 
 code a math rose. (polar coords)
 
-### Code a circle
-
-without sine/cosine
+can you create a vector sine curve? In something like Illustrator?
 
 ```javascript
-background("white", true);
-size(-2, -2, 4, 4);
+size(600, 600);
 
-for (var i = -100; i <= 100; i++) {
-  var x = i / 100;
-  var y = Math.sqrt(1 - (x ** 2));
-  circle(x, y, 0.01)
-  circle(x, -y, 0.01)
+var points = [];
+for (var x = 0, r = 0; r <= Math.PI*2; r += Math.PI*2/600, x += 1) {
+  points.push([x, Math.sin(r) * 200 + 300]);
 }
-```
 
-with sine and cosine
-
-```javascript
-for (var i = 0; i < 100; i++) {
-	var a = i / 100 * Math.PI * 2;
-  circle(Math.cos(a), Math.sin(a), 0.01);
-}
+polyline(points).stroke("black").fill("none");
 ```
 
 ## Tilings
 
 ### Reference
 
-Adam Williamson and [Richard Henry](https://www.richardhenry.art/)
+[Adam Williamson](https://www.adamwilliamson.com/biomorphs/) and [Richard Henry](https://www.richardhenry.art/)
 
-- [Arabesques / biomorphs](https://www.adamwilliamson.com/biomorphs/)
 - [Longer introduction to Arabesques](https://artofislamicpattern.com/resources/introduction-to-islimi/)
 - [Islamic Geometry](https://artofislamicpattern.com/resources/educational-posters/)
+
+[Paul Bourke](http://paulbourke.net/geometry/)
+
+- on [tiling the plane](http://paulbourke.net/geometry/tilingplane/)
+
+Wikipedia
+
+- [Aperiodic Tilings](https://en.wikipedia.org/wiki/List_of_aperiodic_sets_of_tiles)
+  - [Penrose Tiling](https://en.wikipedia.org/wiki/Penrose_tiling)
+  - [Girih tiling](https://en.wikipedia.org/wiki/Girih_tiles)
 
 ### Videos
 
 - [Sesame Street's Geometry of Circles](https://muppet.fandom.com/wiki/Geometry_of_Circles)
 - [Journey to the Center of a Triangle, Bruce & Katharine Cornwell](https://www.youtube.com/watch?v=v_oZ9Pe0yRg)
-- [Paul Bourke, Geometry](http://paulbourke.net/geometry/)
+
+![](http://i.imgur.com/o4y3C6U.gif)
