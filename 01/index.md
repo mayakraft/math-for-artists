@@ -106,7 +106,7 @@ Ask a computer to visualize every number and its divisors.
 ```javascript
 // p5.js
 
-var RADIUS = 20;
+var radius = 20;
 
 function setup() {
   createCanvas(400, 400);
@@ -117,11 +117,11 @@ function setup() {
 function draw() {
   background(220);
   var number = 0;
-  for (var h = 0; h < height; h += RADIUS) {
-    for (var w = 0; w < width; w += RADIUS) {
+  for (var h = 0; h < height; h += radius) {
+    for (var w = 0; w < width; w += radius) {
       number += 1;
       for (var i = 2; i < number; i += 1) {
-        if (number % i === 0) circle(w, h, RADIUS);
+        if (number % i === 0) circle(w, h, radius);
       }
     }
   }

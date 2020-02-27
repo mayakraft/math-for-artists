@@ -93,9 +93,9 @@ if (Math.abs(value) < EPSILON)
 
 ## basis vectors and span
 
-let me introduce two special vectors: **Î** and **Ĵ** (*eye hat* and *jay hat*), they are each unit vectors, length of 1, and they each run along the two axes in the positive direction. **Î** is [1,0] and **Ĵ** is [0,1].
+let me introduce two special vectors: **î** and **ĵ** (*eye hat* and *jay hat*), they are each unit vectors, length of 1, and they each run along the two axes in the positive direction. **î** is [1,0] and **ĵ** is [0,1].
 
-for a moment, think of vectors in a new way. take the vector [2,3] for example. imagine each component is a scalar, the first scales  **Î** and the second scales **Ĵ**. so a [2,3] vector is 2 times the X unit vector, and 3 times the Y unit vector. the advantage of doing this is that we can start to think about *changing the unit vectors*.
+for a moment, think of vectors in a new way. take the vector [2,3] for example. imagine each component is a scalar, the first scales  **î** and the second scales **ĵ**. so a [2,3] vector is 2 times the X unit vector, and 3 times the Y unit vector. the advantage of doing this is that we can start to think about *changing the unit vectors*.
 
 let's do that, imagine 2 random vectors, these will be our new unit vectors. don't worry about number coordinates, just consider the question: using vector addition, adding scaled versions of these two unit vectors, can we hit every point in the plane?
 
@@ -120,18 +120,24 @@ a transformation is a linear transformation as long as the grid lines stay paral
 when you stretch and rotate space, you move the vector to its new location, but you also move the unit X and Y vectors. and this is what makes linear transformations so cool, you can describe the entire transformation, for all vectors, by just writing where the unit X and Y vectors end up. this is because all of our vectors can be described as linear combinations of those unit vectors.
 
 if we define a transform as simply "where the basis vectors end up" then to transform a vector is simply to multiply the x component by the X-basis vector and the y component by the Y.
+
 $$
 \mathbf{v} = x\begin{bmatrix}î_x\\î_y\end{bmatrix}, y\begin{bmatrix}ĵ_x\\ĵ_y\end{bmatrix}
 $$
-the convention is to store the two transformed **Î** and **Ĵ** in a matrix each as a column.
+
+the convention is to store the two transformed **î** and **ĵ** in a matrix each as a column.
+
 $$
 \begin{bmatrix}î_x & ĵ_x\\î_y & ĵ_y\end{bmatrix}
 $$
+
 Matrix vector multiplication laid out looks like:
+
 $$
 \begin{bmatrix}a & c\\b & d\end{bmatrix}
 \begin{bmatrix}x\\y\end{bmatrix} = x\begin{bmatrix}a\\b\end{bmatrix} + y\begin{bmatrix}c\\d\end{bmatrix} = \begin{bmatrix}ax + cy\\bx + dy\end{bmatrix}
 $$
+
 (oh no. we have to talk about matrix column/row order)
 
 **we can now multiply vectors by matrices!** (what about multiplying matrices by matrices)
