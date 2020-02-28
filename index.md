@@ -67,7 +67,7 @@ Polytopes by dimension, the history of the Platonic solids and their 3 symmetry 
 
 Compass straight-edge constructions, centers of triangles, coordinate frames, deriving trigonometric functions, the unit circle, distance formula, atan2, tilings and tessellations
 
-### Week 5, February 27: [Linear Algebra](05/)
+### Week 5, February 27: [Linear Algebra](05/05.pdf)
 
 introduction to vectors, vector arithmetic, span and invalid coordinate spaces, transformations as matrices, transformations that involve shifting the origin, matrix arithmetic, composition matrices
 
