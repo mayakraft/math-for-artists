@@ -1,36 +1,83 @@
 # Week 5, February 27: Linear Algebra
 
-## Trigonometry cont.
+## Trigonometry cont. (30 min)
 
-### common trig problems encoutered by media artists
+### polar coordinates and cartesian coordinates
 
-### atan2( )
+Last class we drew circles using Cartesian coordinates and the formula x² + y² = 1, our dots were not evenly spaced along the curve, they were evenly spaced along the X-axis. we needed a way of thinking "circularly". We needed to use polar coordinates.
 
-a visual explanation of tangent. *Tangent* is short for *the **length** of the tangent*. [The Unit circle](https://upload.wikimedia.org/wikipedia/commons/4/45/Unitcircledefs.svg)
+Centered at the origin, the **angle** was now the thing we iterated in our loop. We used cosine and sine to convert a reguarly-incrementing angle into a drawing of a circle. We didn't have to worry about distance, our circle's radius was 1.
 
-why atan2 solves the problem of sign.
+> Both polar (θ,d) and Cartesian (x,y) make use of two variables, and they can describe every point in 2D space. 2D requires at least two variables; 3D requires at least three...
 
-### calculate the average of two angles
+### Unit circle review
 
-calculate the clockwise (or counter clockwise) interior angle from one to the next.
+Why does a unit circle work so well? What has a length 1? (triangle hypotenuse, circle radius). What does **not** have length 1? (Sine, cosine, tangent). When possible make this **hypotenuse / radius** your entry point, multiply all values by this length and everything will scale up accordingly.
+
+### cosine and sine
+
+- input: angle
+- output: a Cartesian point, the endpoint of the radius line
+
+### Tangent, a visual explanation
+
+review what the word *tangent* even means by drawing some wiggly curves and drawing little tangent segments along them. In trigonometry, in the unit circle, the specific tangent line we're referring to is the one that is **vertical at the far right end of the circle** (at the point [1,0]).
+
+- input: angle
+- output: the **length** of the tangent line
+
+this requires a little drawing. extend the hypotenuse line until it hits the tangent line, *that* point, measure the length of it down to the x axis. That's what tangent means. a negative value is when we're below the x-axis.
+
+### Inverse trig functions
+
+This is simple, they ask the opposite question, in the above examples, flip the input and output:  *what angle* gives you x? In the case of tangent it's not so simple...
+
+> sin⁻¹ and arcsine (arcsin) are the same, two ways of writing inverse sine. **Prefer arc- notation**.
+
+### atan2( ), "give me the angle for a point" (convert cartesian to polar)
+
+*I cannot understate how useful atan2 is to media artists!*
+
+Let's try out arctangent:
+
+1. pick a length (draw it on the board as a vertical line)
+2. Now we can fill in the rest: draw an x-axis, a unit circle tangent to the line, and the y axis.
+3. draw the hypotenuse and the angle! done!
+
+Inverse tangent gives you the **angle between the x axis and the point**. It converts a length into an angle. We saw how when the length is positive it's in quadrant 1, negative: quadrant 4. But what about quadrants 2 and 3?
+
+It solves this by asking for more information: the original x and y point. That answers the question "which quadrant did it come from?" atan2 is basically atan with a if-statement at the beginning.
+
+> In **every other instance** x comes before y. In atan2, y is first. This is because the original programmer imagined the traditional trig notation of putting y over x (y/x) and saying y first.
+
+code an example that draws a big right-pointing arrow at the center, rotates around its center to follow the mouse. *image search for an arrow, put the URL in the "..."*
 
 ```javascript
-// my solution to the problem
-function clockwise_angle (a, b) {
-  while (a < 0) { a += Math.PI * 2; }
-  while (b < 0) { b += Math.PI * 2; }
-  var a_b = a - b;
-  return (a_b >= 0)
-    ? a_b
-    : Math.PI * 2 - (b - a);
-};
+// p5.js
+
+var img;
+
+function setup() {
+  createCanvas(400, 400);
+  img = loadImage("...");
+  imageMode(CENTER);
+}
+
+function draw() {
+  background(220);
+  translate(200, 200);
+  rotate(Math.atan2(mouseY - 200, mouseX - 200));
+  image(img, 0, 0);
+}
 ```
 
-can you create a vector sine curve? In something like Illustrator?
+we first wrote the `image(img, 0, 0)` as `image(img, 200, 200)` but learned that we weren't rotating around the center. transformations are **not communicative**. more on that later!
 
 ### Why do we need linear algebra?
 
-let's talk about distance searching, like the question "what point is nearest?"
+can you calculate the average of two angles? *average the 2 numbers.*
+
+What are some inconsistencies with this method? sometimes it calculates the "interior" angle, sometimes not. If the two angles are near the 0 where it flips +360 suddenly...
 
 ```
 *                      *           *      *                         *
@@ -39,7 +86,7 @@ let's talk about distance searching, like the question "what point is nearest?"
      *            *   *                       *        *
 ```
 
-Given a field of points:
+let's talk about distance searching, like the question "what point is nearest?". Given a field of points:
 
 Q: what is the highest point (closest to the top)?
 
@@ -59,11 +106,24 @@ this lecture is heavily based on Grant Saunderson's [Essence of Linear Algebra](
 
 a vector is two things at once, a list of numbers and an arrow with a length and a direction.
 
-when we draw vectors, we draw them in our familiar coordinate space, the components are the movement along each axis. in 2D space, there are 2 numbers, the first is movement along the X, the second Y.
+A drawing of the vector is always assuming it **starts at the origin**. I can't draw two vectors spaced apart from one another, if I'm going to *move a vector from the origin* we would need more data, we're not bothering with this yet.
+
+draw two vectors and write them out in component form. I'm going to write them as the first example from here on.
+$$
+\mathbf{v} = \begin{bmatrix}3\\1\end{bmatrix} \; or \;\;  \mathbf{v} = (3, 1)
+$$
 
 ### vector addition
 
 **the numberline metaphor**: adding two vectors is placing one at the end of another, and drawing a new line to the last tip. its the same as when we were introduced to addition as children, by moving steps (two numbers of steps) on the number line. step through two vectors by moving x1, y1, then x2, y2. then do all the Xs at once and then all the Ys. it's the same as adding each component first, in the list form.
+
+show an example of *visually* adding two vectors. Then translate these visual drawings into components, let's say they look like (3,1) and (-1,2). Show how the **components can be added**.
+$$
+\begin{bmatrix}3\\1\end{bmatrix} + \begin{bmatrix}-1\\2\end{bmatrix} = \begin{bmatrix}3 - 1\\1 + 2\end{bmatrix} = \begin{bmatrix}2\\3\end{bmatrix}
+$$
+The vector (2,3) should match with our drawing!
+
+**Vector addition is communicative**. I could have added one vector to the other or reversed it. 
 
 ### scalar multiplication
 
@@ -72,6 +132,10 @@ multiplying a vector by a number is "scaling" the vector. 2v stretches the vecto
 > you can describe a digital painting by a set of vectors. connect the dots.
 
 ### why do we need to normalize?
+
+```javascript
+vec.normalize()
+```
 
 a normalized vector removes the concept of distance, but retains the "angle" idea. if we add two vectors that are normalized, we solve the bisect two angles problem! but they need to be normalized.
 
@@ -91,29 +155,30 @@ if (value < EPSILON && value > -EPSILON)
 if (Math.abs(value) < EPSILON)
 ```
 
-## basis vectors and span
+## basis vectors
 
 let me introduce two special vectors: **î** and **ĵ** (*eye hat* and *jay hat*), they are each unit vectors, length of 1, and they each run along the two axes in the positive direction. **î** is [1,0] and **ĵ** is [0,1].
 
-for a moment, think of vectors in a new way. take the vector [2,3] for example. imagine each component is a scalar, the first scales  **î** and the second scales **ĵ**. so a [2,3] vector is 2 times the X unit vector, and 3 times the Y unit vector. the advantage of doing this is that we can start to think about *changing the unit vectors*.
+for a moment, think of vectors in a new way: each component **scales the corresponding basis vector**. take the vector [2,3] for example. imagine each component is a scalar, the first scales  î and the second scales ĵ. so a [2,3] vector is 2 times the X unit vector, and 3 times the Y unit vector. the advantage of doing this is that we can start to think about *changing the unit vectors*.
+$$
+\begin{bmatrix}2\\3\end{bmatrix} = 2\begin{bmatrix}1\\0\end{bmatrix} + 3\begin{bmatrix}0\\1\end{bmatrix}
+$$
 
-let's do that, imagine 2 random vectors, these will be our new unit vectors. don't worry about number coordinates, just consider the question: using vector addition, adding scaled versions of these two unit vectors, can we hit every point in the plane?
+## span
 
-this is what "span" is. the span of these two vectors is all of 2D space.
+imagine new unit vectors. pick two random vectors and don't worry about number coordinates, just draw them. Consider: adding together *scaled* versions of these new î and ĵ, can we hit every point in the plane?
 
-when does this not work? when vectors lie on top of one another, right? this is a broken system (these vectors are linearly dependent). the span of these two vectors is just a line.
+this is what **span** is. the span of these two vectors is all of 2D space.
 
-our happy place is going to be when vectors are linearly independent.
+when does this not work? when vectors lie on top of one another, right? this is a broken system (these vectors are *linearly dependent*). the span of these two vectors is just a line. we definitely prefer our basis vectors to be *linearly independent*.
 
 ## matrices as transformations
 
 transform is a special term for function. in math, functions take in something, like a number and spits out another number, in linear algebra, a function (transformations) takes in a vector and spit out another vector.
 
-transforms are things you're familiar with, rotation, scale, shear (we're going to see why translation is a special case)
+transforms are things you're familiar with, rotation, scale, shear (we're going to see why translation is a special case, if you're curious, in our conversation from day 2 on transformations, there was a special kind where the *origin never changed*).
 
-return to our conversation from day 2 on transformations. there was a special kind where the *origin never changed* this is one property of affine transforms.
-
-a transformation is a linear transformation as long as the grid lines stay parallel and straight, and the origin stays in the same place.
+a transformation is said to be **a linear transformation** as long as the grid lines stay parallel, straight, evenly-spaced, and the origin stays in the same place.
 
 **parallel and evenly-spaced**
 
@@ -125,7 +190,7 @@ $$
 \mathbf{v} = x\begin{bmatrix}î_x\\î_y\end{bmatrix}, y\begin{bmatrix}ĵ_x\\ĵ_y\end{bmatrix}
 $$
 
-the convention is to store the two transformed **î** and **ĵ** in a matrix each as a column.
+the convention is to store the two transformed î and ĵ in a matrix each as a column.
 
 $$
 \begin{bmatrix}î_x & ĵ_x\\î_y & ĵ_y\end{bmatrix}
@@ -156,11 +221,42 @@ Line representations: (point, vector) (point, point) (vector, scalar-distance-to
 
 ### Classwork
 
-scale a polygon in SVG only using a matrix
+scale a polygon in SVG only using a matrix. Let's do this by creating an SVG from scratch. start out with:
+
+```xml
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	<circle cx="50" cy="50" r="10" />
+</svg>
+```
+
+modify this by adding another circle *behind* the first circle (before), give it a gray fill and a transformation. We are going to edit the matrix components directly.
+
+```xml
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+	<circle cx="50" cy="50" r="10" fill="gray" transform="matrix(1 0 0 1 0 0)" />
+	<circle cx="50" cy="50" r="10" />
+</svg>
+```
+
+This matrix is the identity matrix. Change the `matrix()` entry to create a skew effect, the shadow falls of into the distance creating an illusion of depth.
+
+Edit the shadow (first circle):
+
+1. set cx and cy to 0, move these translation components into the matrix (final column)
+2. modify the matrix to create a skew effect
+
+```
+matrix(1 0 -1 0.5 60 55)
+```
 
 ### Create a rotation matrix
 
 apply our knowledge from trig to create a matrix that rotates at ANY degree.
+
+Make a drawing showing the basis vectors rotating around 30°, 60°, see how they are tracing the outline of a circle? We know how to define these points!
+$$
+\begin{bmatrix}cos(θ) & -sin(θ)\\sin(θ) & cos(θ)\end{bmatrix}
+$$
 
 ### Combining transformations
 
@@ -168,9 +264,11 @@ the key to multiplying matrices is that *inside* each matrix are simply vectors.
 
 matrix multiplication goes from **right to left**.
 
-are transforms **transitive**? can you rotate then scale? same as scale then rotate?
+are transforms **communicative**? can you rotate then scale? same as scale then rotate?
 
 **associative**? yes!
+
+a matrix that is a product of two or more matrices is called a **composition matrix**.
 
 ### Homework
 
