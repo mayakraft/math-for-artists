@@ -25,7 +25,7 @@ This makes a translation along the Y-axis a "slide left or right", or a [strafe]
 
 The matrix-representation of 2D transforms we learned about was **column-major 2×3 matrices**. They are used by CSS and SVG, you can [read about them here](https://www.w3.org/TR/css-transforms-1/#interpolation-of-2d-matrices).
 
-> Remember the first two columns are the î and ĵ basis vectors, the third doesn't describe a basis vector at all, it's simply the translation vector, sort of *tacked-on*. It's a computer-graphics standard but calculators don't know what to do with this extra column, [wolfram alpha](https://www.wolframalpha.com/input/?i={{0%2C-1%2C0}%2C{1%2C0%2C0}}++*+{{1%2C0%2C20}%2C{0%2C1%2C20}}) will complain: *matrices have incompatible dimensions*.
+> Remember the first two columns are the î and ĵ basis vectors, the third doesn't describe a basis vector at all, it's simply the translation vector, sort of *tacked-on*. It's a computer-graphics standard but calculators don't know what to do with this extra column, [wolfram alpha](https://www.wolframalpha.com) will complain: *matrices have incompatible dimensions*.
 
 We have to use our own calculators. Graphics libraries know how to handle this matrix multiplication. I threw together a quick html file which will multiply 2 matrices.
 
@@ -46,3 +46,19 @@ var multiply = function multiply(m1, m2) {
 };
 ```
 
+### multiplication order
+
+Here's how I'm thinking about it. let's say you're walking this out at ITP and you have 2 transforms:
+
+1. walk forward (translate)
+2. rotate 90 degrees
+
+we expect when you rotate you're **not rotating around the origin** but rather rotate around yourself, the point you're standing on. Keeping this in mind if you enter the matrices in the matrix calculator so that 
+
+\- matrix 1 is the translate forward (right side)
+
+\- matrix 2 is the rotate 90 (left side)
+
+the result composite matrix is what we expect! the translation component doesn't move.
+
+To get your global composite matrix, I suggest gathering together your matrices from 1 to N. Multiply the first and second transform in spots 1 and 2 to get your first composite. Multiply that composite by the third-transform matrix, with the composite in matrix 1 place and the third-transform matrix in matrix 2 place). Repeat, always putting the composite in matrix 1 and the next transform in matrix 2.
