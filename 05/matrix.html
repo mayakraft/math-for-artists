@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<style>
+body {
+  font-family: sans-serif;
+  margin: 0 20rem;
+}
+.column {
+  margin: 2rem;
+}
+.two-columns {
+  display: flex;
+  flex-direction: row;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+input[type=text] {
+  font-size: 2rem;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  body { margin: 0 8rem; }
+  .column { margin: 1rem; }
+}
+@media (max-width: 700px) {
+  body { margin: 0rem; }
+}
+</style>
+</head>
+<body>
+  <div class="column">
+    <h1>multiply transformation matrices</h1>
+  </div>
+  <div class="two-columns">
+    <div class="column">
+      <h3>matrix 2</h3>
+      <div class="row">
+        <input id="ix2" placeholder="î𝑥" type="text">
+        <input id="jx2" placeholder="ĵ𝑥" type="text">
+        <input id="tx2" placeholder="t𝑥" type="text">
+      </div>
+      <div class="row">
+        <input id="iy2" placeholder="î𝑦" type="text">
+        <input id="jy2" placeholder="ĵ𝑦" type="text">
+        <input id="ty2" placeholder="t𝑦" type="text">
+      </div>
+    </div>
+    <div class="column">
+      <h3>matrix 1</h3>
+      <div class="row">
+        <input id="ix1" placeholder="î𝑥" type="text">
+        <input id="jx1" placeholder="ĵ𝑥" type="text">
+        <input id="tx1" placeholder="t𝑥" type="text">
+      </div>
+      <div class="row">
+        <input id="iy1" placeholder="î𝑦" type="text">
+        <input id="jy1" placeholder="ĵ𝑦" type="text">
+        <input id="ty1" placeholder="t𝑦" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <h3>composite</h3>
+    <div class="row">
+      <input id="ix3" placeholder="î𝑥" type="text" readonly>
+      <input id="jx3" placeholder="ĵ𝑥" type="text" readonly>
+      <input id="tx3" placeholder="t𝑥" type="text" readonly>
+    </div>
+    <div class="row">
+      <input id="iy3" placeholder="î𝑦" type="text" readonly>
+      <input id="jy3" placeholder="ĵ𝑦" type="text" readonly>
+      <input id="ty3" placeholder="t𝑦" type="text" readonly>
+    </div>
+  </div>
+<script>
+
+var multiply = function multiply(m1, m2) {
+  return [
+    m1[0] * m2[0] + m1[2] * m2[1],
+    m1[1] * m2[0] + m1[3] * m2[1],
+    m1[0] * m2[2] + m1[2] * m2[3],
+    m1[1] * m2[2] + m1[3] * m2[3],
+    m1[0] * m2[4] + m1[2] * m2[5] + m1[4],
+    m1[1] * m2[4] + m1[3] * m2[5] + m1[5]
+  ];
+};
+
+var components = ["ix", "iy", "jx", "jy", "tx", "ty"];
+
+var update = function () {
+  var matrices = [1, 2].map(i => components
+    .map(function(str) { return "#" + str + i; })
+    .map(function(id) {
+      return parseFloat(document.querySelector(id).value)
+    }));
+  var result = multiply(matrices[0], matrices[1]);
+  components.map(function(str) { return "#" + str + "3"; })
+    .forEach(function(id, i) {
+      document.querySelector(id).value = result[i];
+    });
+};
+
+window.addEventListener("load", function () {  
+  components.map(function(str) {
+    return ["#" + str + "1", "#" + str + "2"];
+  }).reduce(function(a, b) { return a.concat(b)}, [])
+    .forEach(function(id) {
+      document.querySelector(id).oninput = update;
+    });
+});
+
+</script>
+</body>
+</html>

@@ -32,7 +32,7 @@ this requires a little drawing. extend the hypotenuse line until it hits the tan
 
 This is simple, they ask the opposite question, in the above examples, flip the input and output:  *what angle* gives you x? In the case of tangent it's not so simple...
 
-> sin⁻¹ and arcsine (arcsin) are the same, two ways of writing inverse sine. **Prefer arc- notation**.
+> two ways of writing "inverse sine": sin⁻¹ and arcsine (arcsin). **Prefer arc- notation**.
 
 ### atan2( ), "give me the angle for a point" (convert cartesian to polar)
 
@@ -40,13 +40,18 @@ This is simple, they ask the opposite question, in the above examples, flip the 
 
 Let's try out arctangent:
 
-1. pick a length (draw it on the board as a vertical line)
-2. Now we can fill in the rest: draw an x-axis, a unit circle tangent to the line, and the y axis.
+1. pick a length (example: 5), and draw it on the board as a vertical line.
+2. Now we can fill in the rest:
+   * draw an x-axis at the bottom of the line
+   * draw a unit circle tangent to the line (make it radius 1 in relationship with your given length)
+   * draw the y axis.
 3. draw the hypotenuse and the angle! done!
 
 Inverse tangent gives you the **angle between the x axis and the point**. It converts a length into an angle. We saw how when the length is positive it's in quadrant 1, negative: quadrant 4. But what about quadrants 2 and 3?
 
-It solves this by asking for more information: the original x and y point. That answers the question "which quadrant did it come from?" atan2 is basically atan with a if-statement at the beginning.
+**atan2( )** solves this by asking for more information: the original x and y point to be able to answer the question "which quadrant did it come from?"
+
+atan2 is basically atan with a if-statement at the beginning.
 
 > In **every other instance** x comes before y. In atan2, y is first. This is because the original programmer imagined the traditional trig notation of putting y over x (y/x) and saying y first.
 
@@ -54,7 +59,6 @@ code an example that draws a big right-pointing arrow at the center, rotates aro
 
 ```javascript
 // p5.js
-
 var img;
 
 function setup() {
@@ -71,7 +75,9 @@ function draw() {
 }
 ```
 
-we first wrote the `image(img, 0, 0)` as `image(img, 200, 200)` but learned that we weren't rotating around the center. transformations are **not communicative**. more on that later!
+We first wrote the `image` function as `image(img, 200, 200)` but learned that the rotation was still happening at the top-left corner. we moved the 200, 200 into its own line `translate(200, 200)` so it can happen *before* the rotation. **Transformations are not communicative**, more on that later.
+
+> I often think of the translate as happening *after* the rotate, even though it's before, because I think of coordinate spaces from an object-perspective, whereas OpenGL thinks of them from a world-perspective. Translations kind of happen in reverse... Honestly I still find it confusing to this day.
 
 ### Why do we need linear algebra?
 
@@ -115,7 +121,7 @@ $$
 
 ### vector addition
 
-**the numberline metaphor**: adding two vectors is placing one at the end of another, and drawing a new line to the last tip. its the same as when we were introduced to addition as children, by moving steps (two numbers of steps) on the number line. step through two vectors by moving x1, y1, then x2, y2. then do all the Xs at once and then all the Ys. it's the same as adding each component first, in the list form.
+**a vector plus a vector results in a vector**. adding two vectors is placing one at the end of another, and drawing a new line to the last tip. its the same as when we were introduced to addition as children, by moving steps (two numbers of steps) on the number line. step through two vectors by moving x1, y1, then x2, y2. then do all the Xs at once and then all the Ys. it's the same as adding each component first, in the list form.
 
 show an example of *visually* adding two vectors. Then translate these visual drawings into components, let's say they look like (3,1) and (-1,2). Show how the **components can be added**.
 $$
@@ -127,9 +133,10 @@ The vector (2,3) should match with our drawing!
 
 ### scalar multiplication
 
-multiplying a vector by a number is "scaling" the vector. 2v stretches the vector by 2. 1/3 shrinks it. and -3 reverses the direction and scales it by 3.
-
-> you can describe a digital painting by a set of vectors. connect the dots.
+**a number times a vector results in a vector**. the number "scales" the vector, stretching or squishing it along the same direction. 2v stretches the vector by a factor of 2. 1/3 shrinks it. -3 reverses the direction and scales it by 3. We can also perform the operation numerically:
+$$
+2\begin{bmatrix}3\\1\end{bmatrix} = \begin{bmatrix}2\cdot3\\2\cdot1\end{bmatrix} = \begin{bmatrix}6\\2\end{bmatrix}
+$$
 
 ### why do we need to normalize?
 
@@ -205,6 +212,10 @@ $$
 
 (oh no. we have to talk about matrix column/row order)
 
+Important! When you are looking at a matrix, in all the mess of the numbers you are looking at column vectors.
+$$
+\begin{bmatrix}\begin{pmatrix}a\\b\end{pmatrix}\begin{pmatrix}c\\d\end{pmatrix}\end{bmatrix}
+$$
 **we can now multiply vectors by matrices!** (what about multiplying matrices by matrices)
 
 run through some examples multiplying a vector by a matrix
