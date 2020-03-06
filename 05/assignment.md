@@ -23,15 +23,17 @@ This makes a translation along the Y-axis a "slide left or right", or a [strafe]
 
 ## Matrix Multiplication
 
+use this calculator to muliply matrices:
+
+### [matrix.html](matrix.html)
+
 The matrix-representation of 2D transforms we learned about was **column-major 2×3 matrices**. They are used by CSS and SVG, you can [read about them here](https://www.w3.org/TR/css-transforms-1/#interpolation-of-2d-matrices).
 
 > Remember the first two columns are the î and ĵ basis vectors, the third doesn't describe a basis vector at all, it's simply the translation vector, sort of *tacked-on*. It's a computer-graphics standard but calculators don't know what to do with this extra column, [wolfram alpha](https://www.wolframalpha.com) will complain: *matrices have incompatible dimensions*.
 
-We have to use our own calculators. Graphics libraries know how to handle this matrix multiplication. I threw together a quick html file which will multiply 2 matrices.
+We have to use our own calculators. Graphics libraries know how to handle this matrix multiplication. I threw together a quick html file which will multiply 2 matrices. link above.
 
-### [matrix.html](matrix.html)
-
-if you are interested this is the matrix multiply function this file uses:
+if you are interested, this is the matrix multiply function this file uses:
 
 ```javascript
 var multiply = function multiply(m1, m2) {

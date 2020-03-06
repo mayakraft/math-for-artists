@@ -1,6 +1,11 @@
-# Week 5, February 27: Linear Algebra
+# 05: Linear Algebra
 
-## Trigonometry cont. (30 min)
+> files relating to this lecture:
+>
+> - [assignment](assignment.md)
+> - [matrix.html](matrix.html)
+
+## Trigonometry review (30 min)
 
 ### polar coordinates and cartesian coordinates
 
@@ -244,12 +249,14 @@ modify this by adding another circle *behind* the first circle (before), give it
 
 ```xml
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-	<circle cx="50" cy="50" r="10" fill="gray" transform="matrix(1 0 0 1 0 0)" />
+	<circle cx="0" cy="0" r="10" fill="gray" transform="matrix(1 0 0 1 0 0)" />
 	<circle cx="50" cy="50" r="10" />
 </svg>
 ```
 
 This matrix is the identity matrix. Change the `matrix()` entry to create a skew effect, the shadow falls of into the distance creating an illusion of depth.
+
+> anytime you add affine transforms to a shape, you **must set it's coordinates to (0, 0)**
 
 Edit the shadow (first circle):
 

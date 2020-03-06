@@ -2,19 +2,19 @@
 
 ## Class Introduction
 
-[30 minutes] Course administration: Syllabus, office hours. Student introductions, what do you hope to learn? what is your relationship with math?
+[30 minutes] Course administration: Syllabus, office hours. Student introductions, what is your relationship with math?
 
 ## History (30 minutes)
 
-Often in western education it's taught that Ancient Greek people were skilled at math but that math had to be "rediscovered" during the renaissance following a relatively uninspired Medieval ages. At a minimum this leaves out both the revolutions in Gupta India where numerals were invented and the Islamic golden age giving us things like algebra.
+Often in western education it's taught that Ancient Greek people were skilled at math, but then math had to be "rediscovered" during the renaissance following an uninspiring Medieval ages. At a minimum this leaves out both the revolutions in Gupta India where numerals were invented and the Islamic golden age giving us things like algebra.
 
-Even before Hellenistic Greece, things like the Pythaogrean theorem was know across the world, discovered independently. The construction of the Pyramids in 2,500 BC required significant engineering and math. But let's fast foward to Ancient Greece, and discuss three periods:
+Even before Classical Greece, things like the Pythaogrean theorem was know across the world, discovered independently. The construction of the Pyramids in 2,500 BC required significant engineering and math. But let's fast foward to Ancient Greece, and discuss three periods:
 
 1. Greece (600BC-200BC)
 2. India, the Gupta period (~400AD)
 3. modern-day Iraq/Iran (800AD-1200AD)
 
-In Hellenistic Greece we had whole numbers and fractions. To the Pythogreans, numbers were holy, irrational numbers were impossible. Hippasus, a Pythagorean, was killed for proving that √2 was an irrational number, a number that cannot be reduced to a fraction.
+In Classical Greece we had whole numbers and fractions. To the Pythogreans, numbers were holy, irrational numbers were impossible. Hippasus, a Pythagorean, was killed for proving that √2 was an irrational number, a number that cannot be reduced to a fraction.
 
 One glance at Euclid's elements captures the spirit of math at the time. It was very geometric, and they had a reason. Because √2 was unexplainable to them, but a hypoteneuse *surely* existed, Greeks believed that *lengths* were more true than *numbers*.
 
@@ -104,7 +104,7 @@ By the way, every number is divisible by 1 and itself. Don't forget about this, 
 Ask a computer to visualize every number and its divisors.
 
 ```javascript
-// p5.js
+// p5.js  https://editor.p5js.org/
 
 var radius = 20;
 

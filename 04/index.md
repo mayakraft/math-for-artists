@@ -12,7 +12,7 @@ Today we continue our dive into geometry with a focus on 2D, triangles, and trig
 
 on Plato's realm of forms.
 
-As we carve out 2-dimensional space on our paper, we're grasping at another dimension just out of reach. Underneath our circle is a perfect circle, *the form of a circle*, nearly captured on our paper between the fibers and bits of charcoal. Even if our incantation is imperfect, we get better each time. We're after something pure and ultimately un-capturable. But if we get close enough, we trick our senses, and for a second we believe that we're looking at something out of this world.
+As we carve out 2-dimensional space on our paper, we're grasping at another dimension just out of reach. Underneath our circle is a perfect circle, *the form of a circle*, nearly captured on our paper between the fibers and bits of charcoal. Even if our incantation is imperfect, we get better each time. We're after something pure and ultimately un-capturable. But if we get close enough, we trick our senses, and for a second we can believe that we're looking at something out of this world.
 
 [Sesame Street's Geometry of Circles](https://muppet.fandom.com/wiki/Geometry_of_Circles)
 
@@ -98,8 +98,6 @@ Show that the Euler line passes through all 3 points. what are the centers for a
 - given a square:
   - inscribe a circle in a square
   - inscribe a square in another square, with a vertex at a point
-
-![](https://images-na.ssl-images-amazon.com/images/I/51IWLWrhwLL.jpg)
 
 ## Sine, Cosine, Tangent (1 hour)
 
@@ -259,5 +257,3 @@ Wikipedia
 
 - [Sesame Street's Geometry of Circles](https://muppet.fandom.com/wiki/Geometry_of_Circles)
 - [Journey to the Center of a Triangle, Bruce & Katharine Cornwell](https://www.youtube.com/watch?v=v_oZ9Pe0yRg)
-
-![](http://i.imgur.com/o4y3C6U.gif)

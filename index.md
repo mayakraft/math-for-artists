@@ -8,48 +8,11 @@ Thursdays, 6:30 - 9 PM
 
 Instructor: Robby Kraft, rk132@nyu.edu
 
-Office Hours: Monday 11am - 1pm
+Office Hours: Tuesday 1pm - 3pm
 
 ## Course Details
 
 In this class students will learn math tools to boost their digital practice, fix common problems, and understand the math behind our human perception of the physical world. This course spans different branches of math including geometry, linear algebra, logarithmic thinking, and statistics as they relate to a programmer making digital art with our contemporary media ecosystem. The aim of this course isn't to solve equations, rather strengthen our intuition accompanied with historical and ethnomathematics perspectives and foster a healthy relationship to a few branches of math. The prerequisites to this class are basic arithmetic skills and an introduction to programming. We will create applications using free and open-source software, including p5.js, and Pure Data.
-
-## Work
-
-Students will be expected to demonstrate understanding of the material by creating projects and assignments each week, varying from computer programs to physical artworks. Students are expected to deepen their relationship to math. This class concludes with a final project to create a work of math art. The class covers many of the dimensions of math, students should pay attention to the areas that excite them most for contenders for final projects.
-
-## Conduct
-
-Students are expected to be considerate to their fellow students.
-
-This class meets for one two-hour and thirty minute session each week. Students are epected to be present and active participants in each class. If attendance is a serious problem, or students aren't able to focus, students should consider the benefits of taking this class at another time when they do have time to commit. It is advised that students do not miss more than 2 classes.
-
-Unexcused absences or missed deadlines constitute a failure of the assignment.
-
-## Assessment
-
-Final grade is determined:
-
-- Class Participation: 40%
-- Weekly Assignments: 30%
-- Final Project: 30%
-
-## Materials
-
-All students are expected to bring a laptop to every class. We will be using free software:
-
-- [pure data](https://puredata.info/)
-- [p5.js](https://p5js.org/) or [Processing](https://processing.org/)
-- a code editor of your choice ([Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [VS Code](https://code.visualstudio.com/))
-
-Additionally, many ideas are visual, or conceptual but benefit from visualization, it will be **very helpful** if students come to class with paper and some type of writing utensil.
-
-Materials provided by the university
-
-- molding clay (week 3)
-- compasses (week 4)
-
-# Class Overview
 
 ### Week 1, January 30: [Numbers](01/)
 
@@ -69,7 +32,7 @@ Compass straight-edge constructions, centers of triangles, coordinate frames, de
 
 ### Week 5, February 27: [Linear Algebra](05/05.pdf)
 
-introduction to vectors, vector arithmetic, span and invalid coordinate spaces, transformations as matrices, transformations that involve shifting the origin, matrix arithmetic, composition matrices
+Introduction to vectors, vector arithmetic, scaling, span and invalid coordinate spaces, transformations as matrices, transformations that involve shifting the origin, matrix arithmetic, composition matrices
 
 ### Week 6, March 05: Linear Algebra
 
@@ -107,7 +70,40 @@ Shaders, GPU programming, ray marching, signed distance functions, NURBS, OBJ fo
 
 ### Week 14, May 07: Final Presentations
 
----
+## Work
+
+Students will be expected to demonstrate understanding of the material by creating projects and assignments each week, varying from computer programs to physical artworks. Students are expected to deepen their relationship to math. This class concludes with a final project to create a work of math art. The class covers many of the dimensions of math, students should pay attention to the areas that excite them most for contenders for final projects.
+
+## Conduct
+
+Students are expected to be considerate to their fellow students.
+
+This class meets for one two-hour and thirty minute session each week. Students are epected to be present and active participants in each class. If attendance is a serious problem, or students aren't able to focus, students should consider the benefits of taking this class at another time when they do have time to commit. It is advised that students do not miss more than 2 classes.
+
+Unexcused absences or missed deadlines constitute a failure of the assignment.
+
+## Assessment
+
+Final grade is determined:
+
+- Class Participation: 40%
+- Weekly Assignments: 30%
+- Final Project: 30%
+
+## Materials
+
+All students are expected to bring a laptop to every class. We will be using free software:
+
+- [pure data](https://puredata.info/)
+- [p5.js](https://p5js.org/) or [Processing](https://processing.org/)
+- a code editor of your choice ([Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/), [VS Code](https://code.visualstudio.com/))
+
+Additionally, many ideas are visual, or conceptual but benefit from visualization, it will be **very helpful** if students come to class with paper and some type of writing utensil.
+
+Materials provided by the university
+
+- molding clay (week 3)
+- compasses (week 4)
 
 ### STATEMENT ON LAND USE
 
@@ -116,8 +112,6 @@ This classroom, New York University, and Manhattan island of New York City are s
 ---
 
 ## Tisch School of the Arts
-
----
 
 ### STATEMENT OF ACADEMIC INTEGRITY
 
