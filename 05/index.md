@@ -2,8 +2,8 @@
 
 > files relating to this lecture:
 >
-> - [assignment](assignment.md)
-> - [matrix.html](matrix.html)
+> - [assignment](https://robbykraft.github.io/math-for-artists/05/assignment.html)
+> - [matrix.html](https://robbykraft.github.io/math-for-artists/05/matrix.html)
 
 ## Trigonometry review (30 min)
 
