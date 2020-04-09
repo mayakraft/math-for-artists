@@ -52,7 +52,7 @@ logarithmic thinking, linear and log scales, exponential sequences, exponential 
 
 operations on sine waves, spectrograms, filters, timbre, synthesis, color spaces, image compression (JPEG) and discrete cosine transform, image bit-resolution, Nyquist frequency and bit-rate, compression, Kolmogorov complexity, lossy and lossless conversions
 
-### Week 10, April 09: Fourier
+### Week 10, April 09: [Fourier](10/)
 
 Fourier series, Fourier synthesis, FFT, oscilloscope art, signal processing, linkages, repurposing sine functions for animating visual art
 

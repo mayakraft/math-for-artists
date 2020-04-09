@@ -26,6 +26,10 @@ ca 1200 AD: Fibonacci from Italy wrote his book Liber Abaci (the Book of Calcula
 
 ## Counting
 
+> "What is the simplest thing you can do in math?"
+
+Was it **counting**? What did you think of?
+
 Very quickly, let's talk about why do we count the way we count.
 
 ```
@@ -46,21 +50,35 @@ Very quickly, let's talk about why do we count the way we count.
 14 🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
 ```
 
-Look at lines 9 and 10. This line marks the moment that single digits turn into double. What's the difference between these two sets of apples? There is no difference in the apples! This decision to switch to double digits here is entirely arbitrary (it's because of our 10 fingers). We could have grown up in a universe where this division happened at 8 or 12.
+Look at lines 9 and 10. This line marks the moment that single digits turn into double. What's the difference between these two sets of apples and other pairs? There is no difference in the apples! The reason this occures between 9 and 10 is because of our 10 fingers. You could have been born into a society that divides at 6, or 16.
 
-If we used base-12 (anything higher than 10), we would need to invent new glyphs, single characters to represent ten, another for eleven.
+These are number bases, and any number base higher than 10 would need to invent new glyphs, single characters to represent ten, another for eleven.
 
-*Would an alternative number base change the way we see a certain number?*
+*Alternative number bases change the way we see a number*
+
+There is a thing in music where the same music can be played in different keys, sounding the same, only, *higher* or *lower*. However, according to composers and musicians, each key has a *feeling*, subtle, but there. To them, transposing doesn't sound the same-but-higher, it has a different feeling entirely.
+
+
+
+| Key  | description, according to Christian Schubart (1806)  |
+| -------- | ------------------------------------------------------------ |
+| F minor  | Deep depression, funereal lament, groans of misery and longing for the grave. |
+| F# major | Triumph over difficulty, free sigh of relief utered when hurdles are surmounted; echo of a soul which has fiercely struggled and finally conquered lies in all uses of this key. |
+| F# minor | A gloomy key: it tugs at passion as a dog biting a dress. Resentment and discontent are its language. |
+| G major  | Everything rustic, idyllic and lyrical, every calm and satisfied passion, every tender gratitude for true friendship and faithful love,--in a word every gentle and peaceful emotion of the heart is correctly expressed by this key. |
+| G minor  | Discontent, uneasiness, worry about a failed scheme; bad-tempered gnashing of teeth; in a word: resentment and dislike. |
+
+
 
 How many numbers divide into 10? **2, 5**
 
-How many numbers divide into 12? **2, 3, 4, 6**
+How many numbers divide into 12? **2, 3, 4, 6** this density of divisors makes this base feel more *useful*, more symmetries, things line up.
 
-*Would an alternative number base change our relationship to math?*
+*Would an alternative number base change your relationship to math?*
 
 ## Number Bases
 
-There is a kind of a balance I'd like you to observe. Here is the number we know as ninty-nine in four different number bases:
+There is a relationship between number bases. Here is the number we know as ninty-nine in four different number bases:
 
 - 1100011 (binary)
 - 143 (base-8)
