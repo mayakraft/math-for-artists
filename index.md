@@ -56,17 +56,17 @@ operations on sine waves, spectrograms, filters, timbre, synthesis, color spaces
 
 Fourier series, Fourier synthesis, FFT, oscilloscope art, signal processing, linkages, repurposing sine functions for animating visual art
 
-### Week 11, April 16: Statistics
+### Week 11, April 16: [Shaping](11/)
 
-numpy + Jupyter notebooks, k-means-clustering, P-NP complexity, Newton's method, converging to local minima, types of noise, seeding a random number generator, shaping random numbers in visual art
+shaping numbers in the unit interval, signal filters and DCT in JPEG compression, complex numbers in the complex plane, polar form, complex numbers to generate fractals
 
 ### Week 12, April 23: Computational Geometry
 
-Complex numbers, imaginary axis of the number line, cartesian and polar forms, implementation of algorithms in math art, fractals
-
-### Week 13, April 30: Computational Geometry
-
 Shaders, GPU programming, ray marching, signed distance functions, NURBS, OBJ format, searching and sorting space, partitioning
+
+### Week 13, April 30: Statistics
+
+numpy + Jupyter notebooks, k-means-clustering, P-NP complexity, Newton's method, converging to local minima, curve-fitting
 
 ### Week 14, May 07: Final Presentations
 

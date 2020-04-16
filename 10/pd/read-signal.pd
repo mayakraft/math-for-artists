@@ -1,4 +1,4 @@
-#N canvas 296 155 450 300 12;
+#N canvas 279 240 450 300 12;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array array1 128 float 3;
 #A 0 0.0142843 0.0857121 0.0999976 0.142854 0.214282 0.142854 0.114283
@@ -22,10 +22,10 @@
 #X coords 0 1 128 -1 200 140 1 0 0;
 #X restore 125 38 graph;
 #X obj 126 208 hsl 200 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7000 1;
+-1 -1 14700 1;
 #X floatatom 123 252 5 0 0 0 - - -;
 #X obj 78 41 vsl 15 128 -1 1 0 0 empty arrayvalue empty 0 -9 0 10 -262144
--1 -1 9706 1;
+-1 -1 6804 1;
 #X obj 167 251 s arrayvalue;
 #X obj 123 228 tabread array1;
 #X connect 1 0 5 0;

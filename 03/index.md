@@ -238,4 +238,9 @@ categories and properties
 - [Solids, Tom Lechner](https://www.tomlechner.com/sculptures/solids.html)
 - [Tomoko Fuse's Unit Origami](https://www.amazon.com/Unit-Origami-Multidimensional-Tomoko-Fuse/dp/0870408526/ref=pd_sbs_14_1/138-6878063-7283567)
 
+Examples
+
+- [how to build a truncated icosahedron from toilet paper rolls](https://twitter.com/mrallanmaths/status/1125438241774166017)
+- [lots of broken links but the ones that remain are pretty far out](https://www.ics.uci.edu/~eppstein/junkyard/polymodel.html)
+
 Photo credits: [Wikipedia](https://www.wikipedia.org/), [Wolfram math world](http://mathworld.wolfram.com/)

@@ -115,19 +115,31 @@ for a sanity check let's use the same tool, a 45 degree rotation but instead of 
 
 ## Fourier series, Fourier synthesis, FFT
 
+> show a 
+
+what is a **linear transform**? something that is invertable. this is the key of it. what does it preserve?
+
+okay so let's back up a second.
+
+let's say you have a sound file. what format is that sound file in? *is it uncompressed?* an array of numbers.
+
+how can you visualize the waveform.
+
 [Quake on Oscilloscope](https://www.youtube.com/watch?v=aMli33ornEU)
 
 ### Discrete Fourier Transform
 
+[Dan Shiffman's Coding Train coding challenge](https://thecodingtrain.com/CodingChallenges/130.1-fourier-transform-drawing.html)
+
 [Wikipedia page](https://en.wikipedia.org/wiki/Discrete_Fourier_transform)
+
+first of all why is this even useful? [watch **one minute** of this video starting at 10:36](https://youtu.be/spUNpyF58BY?t=636)
 
 Discrete Transforms involve the sum (from 0 to N). Let's make sure we understand the SUM function.
 
-![](/Users/Robby/Teaching/math-for-artists/11/images/Madhava.svg)
+![](images/Madhava.svg)
 
 can you convert this into sum formula? (can you convert it into for-loop notation?) [solution](https://en.wikipedia.org/wiki/Madhava_of_Sangamagrama#The_value_of_π_(pi))
-
-[Dan Shiffman's Coding Train coding challenge](https://thecodingtrain.com/CodingChallenges/130.1-fourier-transform-drawing.html)
 
 sine waves: amplitude, frequency, phase. operations on waves, addition, multiplication. the conversion of complex information into lightweight by fourier representation.
 
@@ -168,7 +180,9 @@ Linkages, Fourier drawing.
 
 [Toby Schachman Shadershop](http://tobyschachman.com/Shadershop/)
 
-[@ChocoLinkage](https://twitter.com/ChocoLinkage)
+[@ChocoLinkage](https://twitter.com/ChocoLinkage) in this video he teaches you [how to make a 4 bar linkage](https://twitter.com/ChocoLinkage/status/1195732460249571328)
+
+[Theo Jansen's Strandbeest](https://www.strandbeest.com/)
 
 recap from last class: [hyperbolic sunflower](https://twitter.com/ZenoRogue/status/1247900522905886723)
 
@@ -176,7 +190,9 @@ recap from last class: [hyperbolic sunflower](https://twitter.com/ZenoRogue/stat
 
 watch [3blue1brown's Fourier video](https://www.youtube.com/watch?v=spUNpyF58BY)
 
+can you repurpose dan shiffman's sketch with a vector file? Like, the island of Manhattan. can you lower the frequencies?
 
+Make a linkage in Geogebra, or in the real world!
 
 ## Appendix
 

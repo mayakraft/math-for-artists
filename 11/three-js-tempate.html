@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<title>three js</title>
+<style>
+	/*css goes here*/
+html, body {
+	margin: 0;
+	overflow: hidden;  /*nice to not use this*/
+}
+</style>
+</head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+
+<script>
+window.onload = function () {
+	// we're gonna type here
+	var camera = new THREE.PerspectiveCamera(
+		70,
+		window.innerWidth / window.innerHeight,
+		0.01,
+		1000
+	);
+	camera.position.z = 10;
+
+	var scene = new THREE.Scene();
+
+	// add geometry here
+	var box = new THREE.BoxBufferGeometry(4, 4, 4,2, 2, 2);
+	var material = new THREE.MeshBasicMaterial({
+		color: 0xffffff,
+		wireframe: true
+	});
+	var mesh = new THREE.Mesh(box, material);
+	scene.add(mesh);
+
+	var renderer = new THREE.WebGLRenderer({ antialias: true });
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	document.body.appendChild(renderer.domElement);
+
+	function animate() {
+		renderer.render(scene, camera);
+		requestAnimationFrame(animate);
+	}
+	animate();
+
+};
+
+
+
+</script>
