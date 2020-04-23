@@ -53,6 +53,10 @@ If possible, don't think in these if statements! (this can be done in one equati
 
 There is a benefit to using single equations, if there is an option. We will see this in a later class when we do distance-function shader drawing.
 
+Get familiar with some tricks to form some popular simple wave shapes
+
+- [wolfram](https://mathworld.wolfram.com/FourierSeriesSawtoothWave.html) (see-also section at the bottom, triangle wave...)
+
 ## Pure Data
 
 ### [scope.pd](pd/scope.pd)
@@ -221,3 +225,8 @@ const fourierX = dft(x);
 const fourierY = dft(y);
 ```
 
+## Appendix
+
+[path to points](https://github.com/Shinao/PathToPoints) helpful for converting a picture to be used in Shiffman's Fourier p5js code
+
+[purr-data](https://agraef.github.io/purr-data/) is a fork of pure data to improve the ui

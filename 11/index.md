@@ -4,7 +4,7 @@
 
 the importance of the UNIT interval. between 0...1.
 
-The whole point is to be effortlessly alternate between addition-type operations and multiplication/scaling-type operations.
+The whole point is to be effortlessly alternate between addition-type operations and multiplication/scaling-type operations. The reason this works so well is that you know for certain where the top and bottom bounds will end up. the 1 goes to 1 and 0 goes to 0.
 
 and one general application is animation curves. Lerp is just one kind of interpolation. cosine, cubic, catmull-rom.
 
@@ -106,15 +106,66 @@ first, review the summary notation. iterations. how does a for-loop look in math
 
 a good way to understand it is looking at [arithmetic and geometric means](https://en.wikipedia.org/wiki/Average#Pythagorean_means)
 
+many of the [approximations of pi]([https://en.wikipedia.org/wiki/List_of_formulae_involving_%CF%80#Formulae_yielding_%CF%80](https://en.wikipedia.org/wiki/List_of_formulae_involving_π#Formulae_yielding_π)) are made with the sum operator 
+
 code the mandelbrot fractal in p5.js.
+
+```javascript
+// Mandelbrot fractal by Dan Shiffman, https://www.youtube.com/watch?v=6z7GQewK-Ks
+function setup() {
+  createCanvas(400, 400);
+  pixelDensity(1);
+  loadPixels();
+  for (var x = 0; x < width; x++) {
+    for (var y = 0; y < height; y++) {
+      
+      var real = map(x, 0, width, -1.5, 0.5);
+      var imag = map(y, 0, height, -1, 1);
+      var startReal = real;
+      var startImag = imag;
+      
+      var i;
+      for(i = 0; i < 100; i++) {
+        var newReal = real**2 - imag**2;
+        var newImag = 2 * real * imag;
+        
+        real = newReal + startReal;
+        imag = newImag + startImag;
+        
+        if (abs(real + imag) > 16) {
+          break;
+        }
+      }
+      
+      var color = map(i, 0, 100, 0, 1);
+      color = Math.sqrt(color) * 255;
+      if (i === 100) {
+        color = 0;
+      }
+      
+      var px = (x + y*width) * 4;
+      pixels[px + 0] = color;
+      pixels[px + 1] = color;
+      pixels[px + 2] = color;
+      pixels[px + 3] = 255;
+    }
+  }
+  updatePixels();
+}
+```
+
+
 
 ## Recap: Linear algebra
 
 Project: Create a 3D world that rotates around with your device gyroscope/accelerometer orientation, served via. ngrok, and uses dot and cross products to highlight or activate certain geometry in the world that is related to the user's viewpoint.
 
+See: [Bounden](https://www.youtube.com/watch?v=Gete61IxkPo) the dance app
+
 This is picking up where we left off from day 7 with the three.js introduction
 
 ```javascript
+var mesh; // make this a global variable
 window.onload = function () {
 	var camera = new THREE.PerspectiveCamera(
 		70,
@@ -132,7 +183,7 @@ window.onload = function () {
 		color: 0xffffff,
 		wireframe: true
 	});
-	var mesh = new THREE.Mesh(box, material);
+	mesh = new THREE.Mesh(box, material);
 	scene.add(mesh);
 
 	var renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -145,6 +196,75 @@ window.onload = function () {
 	}
 	animate();
 };
+```
+
+join this with the orientation-sensor to matrix code
+
+```javascript
+var degtorad = Math.PI / 180;
+
+function makeRotationMatrix(alpha, beta, gamma) {
+  var _x = beta  ? beta  * degtorad : 0;
+  var _y = gamma ? gamma * degtorad : 0;
+  var _z = alpha ? alpha * degtorad : 0;
+
+  var cX = Math.cos( _x );
+  var cY = Math.cos( _y );
+  var cZ = Math.cos( _z );
+  var sX = Math.sin( _x );
+  var sY = Math.sin( _y );
+  var sZ = Math.sin( _z );
+
+  //
+  // ZXY-ordered rotation matrix construction.
+  //
+
+  var m11 = cZ * cY - sZ * sX * sY;
+  var m12 = - cX * sZ;
+  var m13 = cY * sZ * sX + cZ * sY;
+
+  var m21 = cY * sZ + cZ * sX * sY;
+  var m22 = cZ * cX;
+  var m23 = sZ * sY - cZ * cY * sX;
+
+  var m31 = - cX * sY;
+  var m32 = sX;
+  var m33 = cX * cY;
+
+  return [
+    m11, m12, m13, 0,
+    m21, m22, m23, 0,
+    m31, m32, m33, 0,
+    0, 0, 0, 1
+  ];
+  // you will notice that the axes don't behave properly
+  // the row column order is flipped. this is a common problem.
+  // the fix is below:
+  // return [
+  //   m11, m21, m31, 0,
+  //   m12, m22, m32, 0,
+  //   m13, m23, m33, 0,
+  //   0, 0, 0, 1
+  // ];
+};
+
+function handleOrientation(e) {
+  let matrix = makeRotationMatrix(e.alpha, e.beta, e.gamma);
+  if (matrix) {
+  	window.mesh.matrix.set(...matrix);
+  }
+}
+
+function getPermission() {
+  if (typeof DeviceOrientationEvent.requestPermission === "function") {
+    DeviceOrientationEvent.requestPermission()
+      .then(permissionState => {
+        if (permissionState === "granted") {
+          window.addEventListener("deviceorientation", handleOrientation);
+        }
+      }).catch(console.error);
+  }
+}
 ```
 
 ### Conics
