@@ -60,7 +60,7 @@ Fourier series, Fourier synthesis, FFT, oscilloscope art, signal processing, lin
 
 shaping numbers in the unit interval, signal filters and DCT in JPEG compression, complex numbers in the complex plane, polar form, complex numbers to generate fractals
 
-### Week 12, April 23: [Computational Geometry](12/)
+### Week 12, April 23: [Shaders](12/)
 
 Shaders, GPU programming, ray marching, signed distance functions, NURBS, OBJ format, searching and sorting space, partitioning
 
