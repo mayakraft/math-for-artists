@@ -58,7 +58,7 @@ decision problems, Hilbert, Russel, Turing, Gödel, and the reducibility of a fo
 
 ## conics
 
-David Huffman and conics in curved-crease origami.
+David Huffman and conics in curved-crease origami. [paper 1](http://erikdemaine.org/papers/Huffman_Origami5/paper.pdf) more stuff in #1. [paper 2](http://erikdemaine.org/papers/HuffmanTess_JMD2013/paper.pdf)
 
 ellipses: Draw them with a string and 2 tacks. Talk about the reflection deal: satellite dishes, whisper dishes, back of lamps.
 
