@@ -64,9 +64,9 @@ shaping numbers in the unit interval, signal filters and DCT in JPEG compression
 
 Shaders, GPU programming, ray marching, signed distance functions, NURBS, OBJ format, searching and sorting space, partitioning
 
-### Week 13, April 30: Statistics
+### Week 13, April 30: [Wrap-up](13/)
 
-numpy + Jupyter notebooks, k-means-clustering, P-NP complexity, Newton's method, converging to local minima, curve-fitting
+k-means clustering, kolmogorov complexity, boolean logic, quaternions, higher dimensions, undecidable problems, conics, geodesics
 
 ### Week 14, May 07: Final Presentations
 
